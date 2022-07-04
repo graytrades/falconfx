@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Bootstrap css cdn link -->
+        <link rel="stylesheet" href="../public/bootstrap/css/bootstrap.css" crossorigin="anonymous">
+        
+        <!-- Font Awesome cdn link -->
+        <script src="https://kit.fontawesome.com/1d25c703c8.js" crossorigin="anonymous"></script>
+
+        <!-- Main css stylesheet link -->
+        <link rel="stylesheet" href="../public/css/page.css">
+    </head>
+    <body>
+        <!-- Main container -->
+		<div class="container">
+            <div class="row">
+
+                <!-- Header text -->
+                <div class="col-12">
+                    <h3 class="fund-head-txt">Fund Your Account</h3>
+                </div>
+
+                <!-- ---------- Fund through Bitcoin container ---------- -->
+                <div class="col-sm-12 col-md-6 col-lg-6 mx-auto p-2">
+                    <div class="dep-card-wrap">
+                        <div class="dep-card-top-con">
+                            <span class="dep-card-icon fund-1"><img src="../public/image/foot/bitcoin.png" class="img-fund" alt="Bitcoin-Logo" srcset=""></span>
+                            <span class="card-lg-txt light-font">Deposit Bitcoin</span>
+                        </div>
+                        <div class="dep-card-bot-con">
+                            <div class="crypto-price"><p class="fund-txt light-font">1 BTC = €<span id="btc-price">----</span></p></div>
+                            <div class="fund-btn fund-1 normal-txt" onclick="document.location.href='/dashboard/fund/bitcoin'">Fund</div>
+                        </div>
+                    </div>
+                </div>
+                
+
+                <!-- ---------- Fund through Ethereum container ---------- -->
+                <div class="col-sm-12 col-md-6 col-lg-6 mx-auto p-2">
+                    <div class="dep-card-wrap">
+                        <div class="dep-card-top-con">
+                            <span class="dep-card-icon fund-2"><img src="../public/image/foot/ethereum.png" class="img-fund" alt="Ethereum-Logo" srcset=""></span>
+                            <span class="card-lg-txt light-font">Deposit Ethereum</span>
+                        </div>
+                        <div class="dep-card-bot-con">
+                            <div class="crypto-price"><p class="fund-txt light-font">1 ETH = €<span id="eth-price">----</span></p></div>
+                            <div class="fund-btn fund-2 normal-txt" onclick="document.location.href='/dashboard/fund/ethereum'">Fund</div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- ---------- Fund through Bitcoin cash container ---------- -->
+                <div class="col-sm-12 col-md-6 col-lg-6 mx-auto p-2">
+                    <div class="dep-card-wrap">
+                        <div class="dep-card-top-con">
+                            <span class="dep-card-icon fund-3"><img src="../public/image/foot/btc-cash.png" class="img-fund" alt="Bitcoin-Cash-Logo" srcset=""></span>
+                            <span class="card-lg-txt light-font">Deposit Bitcoin-Cash</span>
+                        </div>
+                        <div class="dep-card-bot-con">
+                            <div class="crypto-price"><p class="fund-txt light-font">1 LTE = €<span id="bch-price">----</span></p></div>
+                            <div class="fund-btn fund-3 normal-txt" onclick="document.location.href='/dashboard/fund/bitcoin-cash'">Fund</div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- ---------- Fund through Lite-coin container ---------- -->
+                <div class="col-sm-12 col-md-6 col-lg-6 mx-auto p-2">
+                    <div class="dep-card-wrap">
+                        <div class="dep-card-top-con">
+                            <span class="dep-card-icon fund-4"><img src="../public/image/foot/litecoin.png" class="img-fund" alt="Litecoin-Cash-Logo" srcset=""></span>
+                            <span class="card-lg-txt light-font">Deposit Litecoin</span>
+                        </div>
+                        <div class="dep-card-bot-con">
+                            <div class="crypto-price"><p class="fund-txt light-font">1 LTE = €<span id="ltc-price">----</span></p></div>
+                            <div class="fund-btn fund-4 normal-txt" onclick="document.location.href='/dashboard/fund/litecoin'">Fund</div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="seperatin-line"></div>
+
+
+                <div class="col-12">
+                    <!--Currency price widget container-->
+                    <div class="widget" style="margin-top: 20px;">
+                        <h5 style="padding-bottom: 10px;padding-left: 7.5px;">Streaming data</h5>
+                        <!-- Cryptocurrency Price Widget -->
+                        <script>
+                            !function(){
+                                var e=document.getElementsByTagName("script"),t=e[e.length-1],n=document.createElement("script");
+                                function r(){
+                                    var e=crCryptocoinPriceWidget.init({base:"USD,EUR,CNY,GBP",items:"BTC,ETH,LTC,XMR,DASH",backgroundColor:"FFFFFF",streaming:"1",rounded:"1",boxShadow:"1",border:"1"});
+                                    t.parentNode.insertBefore(e,t)}n.src="https://co-in.io/widget/pricelist.js?items=BTC%2CETH%2CLTC%2CXMR%2CDASH",n.async=!0,n.readyState?n.onreadystatechange=function(){
+                                        "loaded"!=n.readyState&&"complete"!=n.readyState||(n.onreadystatechange=null,r())}:n.onload=function(){r()},t.parentNode.insertBefore(n,null)}();
+                        </script>
+                        Currency Converter
+                        <!-- /Cryptocurrency Price Widget -->
+                    </div>
+                </div>
+        
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+        <!-- Footer section -->
+        <%- include('foot') %>
+
+
+    </body>
+    <!-- Bootstrap javascript cdn link -->
+    <script src="../bootstrap/js/bootstrap.js"></script>
+    <script src="../public/jquery/jquery.js"></script>
+    <script src="../public/javascript/fundScript/btc.js"></script>
+    <script src="../public/javascript/fundScript/eth.js"></script>
+    <script src="../public/javascript/fundScript/bch.js"></script>
+    <script src="../public/javascript/fundScript/ltc.js"></script>
+</html>

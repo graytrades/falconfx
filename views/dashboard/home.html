@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Bootstrap css cdn link -->
+        <link rel="stylesheet" href="../node/bootstrap/dist/css/bootstrap.css">
+        
+        <!-- Font Awesome cdn link -->
+        <script src="https://kit.fontawesome.com/1d25c703c8.js" crossorigin="anonymous"></script>
+
+        <!-- Main css stylesheet link -->
+        <link rel="stylesheet" href="../public/css/page.css">
+    </head>
+    <body>
+        <div class="main-con-wrap">
+            <!-- Main container -->
+            <div class="container">
+                <div class="row">
+
+                                
+                    <div class="col-12">
+                        <h3 class="fund-head-txt ">Welcome!</h3>
+                    </div>
+                    <div class="col-12">
+                        <h6 class="home-sm-txt light-font">
+                            Welcome to FalconFX Trade, Monitor your live Trading account here and Always check your email for messages from us.
+                        </h6>
+                    </div>
+
+
+                    <!-- Account Balance card -->
+                    <div class="col-xm-12 col-sm-6 col-md-6 col-lg-4">
+                        <div class="p-2 card shadow">
+                            <div class="d-flex align-items-center">
+                                <span class="mr-3 stamp stamp-md">
+                                    <i class="fa home-icon fa-solid fa-dollar-sign"></i>
+                                </span>
+                                <div>
+                                    <h5 class="mb-1"><b>$ 0.00</b></h5>
+                                    <small class="text-muted">Account Balance</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Total Profit card -->
+                    <div class="col-xm-12 col-sm-6 col-md-6 col-lg-4">
+                        <div class="p-2 card shadow">
+                            <div class="d-flex align-items-center">
+                                <span class="mr-3 stamp stamp-md">
+                                    <i class="fa home-icon fa-solid fa-coins"></i></i>
+                                </span>
+                                <div>
+                                    <h5 class="mb-1"><b>$ 0.00</b></h5>
+                                    <small class="text-muted">Total Profit</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Total Bonus card -->
+                    <div class="col-xm-12 col-sm-6 col-md-6 col-lg-4">
+                        <div class="p-2 card shadow">
+                            <div class="d-flex align-items-center">
+                                <span class="mr-3 stamp stamp-md">
+                                    <i class="fa home-icon fa-solid fa-gift"></i>
+                                </span>
+                                <div>
+                                    <h5 class="mb-1"><b>$ 0.00</b></h5>
+                                    <small class="text-muted">Total Bonus</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Total Active Investment Plans card -->
+                    <div class="col-xm-12 col-sm-6 col-md-6 col-lg-4">
+                        <div class="p-2 card shadow">
+                            <div class="d-flex align-items-center">
+                                <span class="mr-3 stamp stamp-md">
+                                    <i class="fa home-icon fa-solid fa-envelope-open"></i>
+                                </span>
+                                <div>
+                                    <h5 class="mb-1"><b>$ 0.00</b></h5>
+                                    <small class="text-muted">Total Active Investment Plans</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Total Deposit card -->
+                    <div class="col-xm-12 col-sm-6 col-md-6 col-lg-4">
+                        <div class="p-2 card shadow">
+                            <div class="d-flex align-items-center">
+                                <span class="mr-3 stamp stamp-md">
+                                    <i class="fa home-icon fa-solid fa-download"></i>
+                                </span>
+                                <div>
+                                    <h5 class="mb-1"><b>$ 0.00</b></h5>
+                                    <small class="text-muted">Total Deposit</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Total Withdrawals card -->
+                    <div class="col-xm-12 col-sm-6 col-md-6 col-lg-4">
+                        <div class="p-2 card shadow">
+                            <div class="d-flex align-items-center">
+                                <span class="mr-3 stamp stamp-md">
+                                    <i class="fa home-icon fa-solid fa-upload"></i>
+                                </span>
+                                <div>
+                                    <h5 class="mb-1"><b>$ 0.00</b></h5>
+                                    <small class="text-muted">Total Withdrawals</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="col-12 mx-auto" style="height: 450px;">
+                        <h4 class="home-lg-txt">Market Data</h4>
+                        <!-- TradingView Widget BEGIN -->
+                        <div class="tradingview-widget-container" style="padding: 15px 3px 22.5px 12.5px;box-shadow: 0.15px 6px 10px 0px rgba(0, 0, 0, 0.3), 0.25px 10px 21px 0px rgba(0, 0, 0, 0.195);">
+                            <div class="tradingview-widget-container__widget"></div>
+                            <div class="tradingview-widget-copyright">Financial Markets by TradingView</div>
+                            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-quotes.js" async>
+                            {
+                            "width": "100%",
+                            "height": "100%",
+                            "symbolsGroups": [
+                            {
+                                "name": "Indices",
+                                "originalName": "Indices",
+                                "symbols": [
+                                {
+                                    "name": "FOREXCOM:SPXUSD",
+                                    "displayName": "S&P 500"
+                                },
+                                {
+                                    "name": "FOREXCOM:NSXUSD",
+                                    "displayName": "US 100"
+                                },
+                                {
+                                    "name": "FOREXCOM:DJI",
+                                    "displayName": "Dow 30"
+                                },
+                                {
+                                    "name": "INDEX:NKY",
+                                    "displayName": "Nikkei 225"
+                                },
+                                {
+                                    "name": "INDEX:DEU40",
+                                    "displayName": "DAX Index"
+                                },
+                                {
+                                    "name": "FOREXCOM:UKXGBP",
+                                    "displayName": "UK 100"
+                                }
+                                ]
+                            },
+                            {
+                                "name": "Futures",
+                                "originalName": "Futures",
+                                "symbols": [
+                                {
+                                    "name": "CME_MINI:ES1!",
+                                    "displayName": "S&P 500"
+                                },
+                                {
+                                    "name": "CME:6E1!",
+                                    "displayName": "Euro"
+                                },
+                                {
+                                    "name": "COMEX:GC1!",
+                                    "displayName": "Gold"
+                                },
+                                {
+                                    "name": "NYMEX:CL1!",
+                                    "displayName": "Crude Oil"
+                                },
+                                {
+                                    "name": "NYMEX:NG1!",
+                                    "displayName": "Natural Gas"
+                                },
+                                {
+                                    "name": "CBOT:ZC1!",
+                                    "displayName": "Corn"
+                                }
+                                ]
+                            },
+                            {
+                                "name": "Bonds",
+                                "originalName": "Bonds",
+                                "symbols": [
+                                {
+                                    "name": "CME:GE1!",
+                                    "displayName": "Eurodollar"
+                                },
+                                {
+                                    "name": "CBOT:ZB1!",
+                                    "displayName": "T-Bond"
+                                },
+                                {
+                                    "name": "CBOT:UB1!",
+                                    "displayName": "Ultra T-Bond"
+                                },
+                                {
+                                    "name": "EUREX:FGBL1!",
+                                    "displayName": "Euro Bund"
+                                },
+                                {
+                                    "name": "EUREX:FBTP1!",
+                                    "displayName": "Euro BTP"
+                                },
+                                {
+                                    "name": "EUREX:FGBM1!",
+                                    "displayName": "Euro BOBL"
+                                }
+                                ]
+                            },
+                            {
+                                "name": "Forex",
+                                "originalName": "Forex",
+                                "symbols": [
+                                {
+                                    "name": "FX:EURUSD",
+                                    "displayName": "EUR/USD"
+                                },
+                                {
+                                    "name": "FX:GBPUSD",
+                                    "displayName": "GBP/USD"
+                                },
+                                {
+                                    "name": "FX:USDJPY",
+                                    "displayName": "USD/JPY"
+                                },
+                                {
+                                    "name": "FX:USDCHF",
+                                    "displayName": "USD/CHF"
+                                },
+                                {
+                                    "name": "FX:AUDUSD",
+                                    "displayName": "AUD/USD"
+                                },
+                                {
+                                    "name": "FX:USDCAD",
+                                    "displayName": "USD/CAD"
+                                }
+                                ]
+                            }
+                            ],
+                            "showSymbolLogo": false,
+                            "colorTheme": "dark",
+                            "isTransparent": true,
+                            "locale": "en"
+                        }
+                            </script>
+                        </div>
+                        <!-- TradingView Widget END -->
+                    </div>
+
+
+
+
+                    <div class="col-12 mx-auto" style="height: 475px;margin: 100px 0;">
+                        <h4 class="home-lg-txt">Symbol Overview</h4>
+                        <!-- TradingView Widget BEGIN -->
+                        <div class="tradingview-widget-container" style="padding: 5px 12.5px 45px 12.5px;box-shadow: 0.15px 6px 10px 0px rgba(0, 0, 0, 0.3), 0.25px 10px 21px 0px rgba(0, 0, 0, 0.195);">
+                            <div id="tradingview_edf33"></div>
+                            <div class="tradingview-widget-copyright">EURUSD, BTCUSDT, GB10Y & VIX Chart</div>
+                            <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+                            <script type="text/javascript">
+                            new TradingView.MediumWidget(
+                            {
+                            "symbols": [
+                            [
+                                "FX:EURUSD|12M"
+                            ],
+                            [
+                                "BINANCE:BTCUSDT|12M"
+                            ],
+                            [
+                                "TVC:GB10Y|12M"
+                            ],
+                            [
+                                "CBOE:VIX|12M"
+                            ]
+                            ],
+                            "chartOnly": true,
+                            "width": "100%",
+                            "height": "100%",
+                            "locale": "en",
+                            "colorTheme": "dark",
+                            "isTransparent": true,
+                            "autosize": true,
+                            "showVolume": true,
+                            "hideDateRanges": false,
+                            "scalePosition": "right",
+                            "scaleMode": "Normal",
+                            "fontFamily": "-apple-system, BlinkMacSystemFont, Trebuchet MS, Roboto, Ubuntu, sans-serif",
+                            "noTimeScale": false,
+                            "valuesTracking": "2",
+                            "chartType": "candlesticks",
+                            "fontColor": "rgba(242, 242, 242, 1)",
+                            "gridLineColor": "rgba(240, 243, 250, 0.06)",
+                            "upColor": "#22ab94",
+                            "downColor": "#f7525f",
+                            "borderUpColor": "#22ab94",
+                            "borderDownColor": "#f7525f",
+                            "wickUpColor": "#22ab94",
+                            "wickDownColor": "#f7525f",
+                            "container_id": "tradingview_edf33"
+                        }
+                            );
+                            </script>
+                        </div>
+                        <!-- TradingView Widget END -->
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <!-- Footer section -->
+            <%- include('foot') %>
+        
+        </div>
+
+
+    </body>
+    <!-- Bootstrap javascript cdn link -->
+    <script src="../bootstrap/js/bootstrap.js"></script>
+    <script src="../public/javascript/jquery.js"></script>
+</html>

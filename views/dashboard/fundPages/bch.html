@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Bootstrap css cdn link -->
+        <link rel="stylesheet" href="../../bootstrap/css/bootstrap.css" crossorigin="anonymous">
+        
+        <!-- Font Awesome cdn link -->
+        <script src="https://kit.fontawesome.com/1d25c703c8.js" crossorigin="anonymous"></script>
+
+        <!-- Main css stylesheet link -->
+        <link rel="stylesheet" href="../../public/css/page.css">
+    </head>
+    <body>
+        <!-- Main container -->
+		<div class="container">
+            <div class="row">
+
+                <!-- Fund sub-page header -->
+                <div class="col-12">
+                    <div class="fund-header">
+                        <span class="dashboard-route" onclick="document.location.href='/dashboard/fund'"><i class="fa header-icon fa-solid fa-arrow-left"></i></span>
+                        <label class="header-txt">Make Deposit</label>
+                    </div>
+                </div>
+
+
+                <!-- Fund sub-page body -->
+                <div class="col-sm-12 col-md-10 col-lg-8 mx-auto">
+                    <div class="fund-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="with-head-con">
+                                        <span class="with-type">Your Deposit Method is <span style="font-weight: 700;">Bitcoin-Cash</span></span>
+                                        <a class="otp-request-btn" href="https://t.me/markhutchinson_official" target="_blank"><i class="fa fa-brands fa-telegram"></i></i><span style="padding-left: 12.5px;">Contact Us Telegram </span></a>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-12">
+                                    <p class="fund-body-light-txt">
+                                        You are to make a minimum Deposit of <label style="color: #118C4F;font-weight: 600;line-height: 0px;">$350</label> using your 
+                                        selected Deposit method. Screenshot and 
+                                        upload the proof of payment
+                                    </p>
+                                </div>
+
+                                <!-- QR code -->
+                                <div class="col-12">
+                                    <p class="fund-lg-txt">Bitcoin-cash QR Code</p>
+                                    <div class="fund-qrcode-wrap">
+                                        <div class="fund-qrcode-con">
+                                            <img src="../../public/image/wallet/bch.jpg" alt="QR Code" class="img-fluid" srcset="">
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <!-- space between fund body containers -->
+                                <div class="fund-space"></div>
+
+
+                                <!-- Wallet Address -->
+                                <div class="col-12">
+                                    <p class="fund-lg-txt" style="text-align: left;">Bitcoin-cash Wallet Address</p>
+                                    <div class="copy-wrap">
+                                        <span class="copySub">
+                                            <label id="api_token" class="copySubTxt">qpzsenzd7gavgq939s4ye8qapjyfye2p7saw9qusfm</label>
+                                        </span>
+                                        <button id="copy_token" class="api-copy-btn">
+                                            <span class="api-copy-btn__tooltip" id="copy_token_tooltip">Copy to clipboard</span>
+                                            <i class="fa fa-solid fa-copy"></i>
+                                        </button>
+                                    </div>
+                                    <p class="fund-copy-txt"><span style="font-weight: 700;">Network Type: </span> Bitcoin-Cash</p>
+                                </div>
+
+
+                                <!-- space between fund body containers -->
+                                <div class="fund-space"></div>
+
+
+                                <!-- Wallet Address -->
+                                <div class="col-12">
+                                    <p class="fund-lg-txt" style="text-align: left;">Upload Payment proof after Deposit.</p>
+                                    <form action="https://formcarry.com/s/UyhIcwiOx6T" method="POST" accept-charset="UTF-8" target="_blank"> 
+                                        <input type="file" class="choose-file" name="BCH_user_file" id="impFile" required>
+                                        <div class="image-preview" id="image-preview">
+                                            <img src="" alt="Image Preview" class="image-preview__image" required>
+                                            <span class="image-preview__default-text">Image Preview</span>
+                                        </div>
+                                        <div class="btn"><button  value="submit" name="submit" class="con-form-btn" style="cursor: pointer;">Submit</button></div>
+                                    </form>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
+        <!-- Footer section -->
+        <%- include('../foot') %>
+
+
+    </body>
+    <!-- Bootstrap javascript cdn link -->
+    <script src="../../bootstrap/js/bootstrap.js"></script>
+    <script src="../../public/javascript/jquery/jquery.js"></script>
+    <script src="../../public/javascript/script/accset.js"></script>
+
+    <script>
+    // ------------------- Fund pqge copy button script start ---------------------
+
+        let copyTokenBtn = document.getElementById('copy_token');
+        copyTokenBtn.addEventListener('click', function() {
+            let apiToken = document.getElementById('api_token').innerText;
+            let copyTokenTooltip = document.getElementById('copy_token_tooltip');
+            const el = document.createElement('input');
+            
+            el.value = apiToken;
+            el.setAttribute('readonly', '');
+            el.style.position = 'absolute';
+            el.style.left = '-9999px';
+            document.body.appendChild(el);
+            el.select();
+            document.execCommand('copy');
+            document.body.removeChild(el);    
+            copyTokenTooltip.innerHTML = "Copied ✓";  
+        });
+        copyTokenBtn.addEventListener('mouseout', function() {
+            let copyTokenTooltip = document.getElementById('copy_token_tooltip');
+            copyTokenTooltip.innerHTML = "Copy to clipboard";
+        })
+
+        // ------------------- Fund sub-page copy button script end ---------------------
+
+
+
+
+
+        // ------------------- Fund sub-page choose file script start ---------------------
+
+        const impFile = document.getElementById("impFile");
+        const previewContainer = document.getElementById("image-preview");
+        const previewImage = previewContainer.querySelector(".image-preview__image");
+        const previewDefaultText = previewContainer.querySelector(".image-preview__default-text");
+        impFile.addEventListener("change", function(){
+            const file = this.files[0];
+            if(file){
+                const reader = new FileReader();
+                previewDefaultText.style.display = "none";
+                previewImage.style.display = "block";
+                reader.addEventListener("load", function(){
+                    previewImage.setAttribute("src", this.result);
+                });
+                reader.readAsDataURL(file);
+            }else{
+                previewDefaultText.style.display = "block";
+                previewImage.style.display = "none";
+                previewImage.setAttribute("src", "");
+            }
+        });
+
+        // ------------------- Fund sub-page choose file script end ---------------------
+    </script>
+</html>

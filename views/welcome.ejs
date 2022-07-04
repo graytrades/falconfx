@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Montserrat:300" rel="stylesheet">
+
+        <!-- Swiper javascript cdn link -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.css"/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <!-- Bootstrap css link -->
+        <link rel="stylesheet" href="node/bootstrap/dist/css/bootstrap.css">
+        <!-- Main css link -->
+        <link rel="stylesheet" href="public/css/style.css">
+
+        <title>GrayTrades</title>
+    </head>
+    <body>
+
+        <!-- Nav-bar -->
+        <%- include('partial/header') %>
+
+
+
+        <!-- Chatbox -->
+        <a href="https://t.me/GrayTrades" target="_blank"><div class="chatbox"><img src="public/image/foot/telegram.png" class="img-fluid" alt="" srcset=""></div></a>
+
+
+
+
+      
+
+        <!-- ----------#####---------- Header (Section) starts here ----------#####---------- -->
+        
+            <header class="container-fluid header-con">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <!-- Header right container -->
+                        <div class="col-sm-12 col-md-12 col-lg-6 p-2">
+                            <div class="header-ryt-container tab-align">
+                                <div class="head-content">Invest in Forex, Stocks and Bonds.</div>
+                                <h1 class="heading" style="color: #202dbd;">THE FUTURE OF FX INVESTING</h1>
+                                <p class="normal-txt light-font">
+                                    All you need to make consistent forex profit without trading.
+                                </p>
+                                <a href="/users/login" class="heading-btn">Sign In</a>
+                                <a href="/users/register" class="heading-btn" style="margin-left: 10px;">Get Started</a>
+                            </div>
+                        </div>
+
+                        <!-- Header right container -->
+                        <div class="col-sm-12 col-md-9 col-lg-6 p-2 mx-auto">
+                            <div class="falcon">
+                                <img src="public/image/sign/falconfx.png.crdownload" class="img-fluid" alt="" srcset="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- TradingView Widget BEGIN -->
+            <div class="tradingview-widget-container">
+                <div class="tradingview-widget-container__widget"></div>
+                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+                {
+                "symbols": [
+                {
+                    "proName": "FOREXCOM:SPXUSD",
+                    "title": "S&P 500"
+                },
+                {
+                    "proName": "FOREXCOM:NSXUSD",
+                    "title": "US 100"
+                },
+                {
+                    "proName": "FX_IDC:EURUSD",
+                    "title": "EUR/USD"
+                },
+                {
+                    "proName": "BITSTAMP:BTCUSD",
+                    "title": "Bitcoin"
+                },
+                {
+                    "proName": "BITSTAMP:ETHUSD",
+                    "title": "Ethereum"
+                },
+                {
+                    "description": "",
+                    "proName": "FX:USDJPY"
+                },
+                {
+                    "description": "",
+                    "proName": "FX:USDJPY"
+                },
+                {
+                    "description": "",
+                    "proName": "CRYPTOCAP:BTC.D"
+                },
+                {
+                    "description": "",
+                    "proName": "TVC:US05Y"
+                }
+                ],
+                "showSymbolLogo": true,
+                "colorTheme": "dark",
+                "isTransparent": false,
+                "displayMode": "adaptive",
+                "locale": "en"
+            }
+                </script>
+            </div>
+            <!-- TradingView Widget END -->
+
+        <!-- Closed ----------#####---------- -->
+
+
+
+
+      
+
+        <!-- ----------#####---------- About Us (Section) starts here ----------#####---------- -->
+        
+            <section class="container-fluid section-general">
+                <div class="container">
+                    <div class="row abt-us align-items-center">
+                        <!-- About us right container -->
+                        <div class="col-sm-12 col-md-8 col-lg-5 p-2 mx-auto">
+                            <!-- TradingView Widget BEGIN -->
+                            <div class="tradingview-widget-container" style="margin: 0 auto;box-shadow: 0.15px 6px 10px 0px rgba(0, 0, 0, 0.3), 0.25px 10px 21px 0px rgba(0, 0, 0, 0.195);">
+                                <div class="tradingview-widget-container__widget"></div>
+                                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js" async>
+                                {
+                                "colorTheme": "dark",
+                                "dateRange": "12M",
+                                "showChart": true,
+                                "locale": "en",
+                                "largeChartUrl": "",
+                                "isTransparent": true,
+                                "showSymbolLogo": true,
+                                "showFloatingTooltip": true,
+                                "width": "300",
+                                "height": "550",
+                                "plotLineColorGrowing": "rgba(41, 98, 255, 1)",
+                                "plotLineColorFalling": "rgba(41, 98, 255, 1)",
+                                "gridLineColor": "rgba(240, 243, 250, 0)",
+                                "scaleFontColor": "rgba(120, 123, 134, 1)",
+                                "belowLineFillColorGrowing": "rgba(41, 98, 255, 0.12)",
+                                "belowLineFillColorFalling": "rgba(41, 98, 255, 0.12)",
+                                "belowLineFillColorGrowingBottom": "rgba(41, 98, 255, 0)",
+                                "belowLineFillColorFallingBottom": "rgba(41, 98, 255, 0)",
+                                "symbolActiveColor": "rgba(41, 98, 255, 0.12)",
+                                "tabs": [
+                                {
+                                    "title": "Indices",
+                                    "symbols": [
+                                    {
+                                        "s": "FOREXCOM:SPXUSD",
+                                        "d": "S&P 500"
+                                    },
+                                    {
+                                        "s": "FOREXCOM:NSXUSD",
+                                        "d": "US 100"
+                                    },
+                                    {
+                                        "s": "FOREXCOM:DJI",
+                                        "d": "Dow 30"
+                                    },
+                                    {
+                                        "s": "INDEX:NKY",
+                                        "d": "Nikkei 225"
+                                    },
+                                    {
+                                        "s": "INDEX:DEU40",
+                                        "d": "DAX Index"
+                                    },
+                                    {
+                                        "s": "FOREXCOM:UKXGBP",
+                                        "d": "UK 100"
+                                    }
+                                    ],
+                                    "originalTitle": "Indices"
+                                },
+                                {
+                                    "title": "Futures",
+                                    "symbols": [
+                                    {
+                                        "s": "CME_MINI:ES1!",
+                                        "d": "S&P 500"
+                                    },
+                                    {
+                                        "s": "CME:6E1!",
+                                        "d": "Euro"
+                                    },
+                                    {
+                                        "s": "COMEX:GC1!",
+                                        "d": "Gold"
+                                    },
+                                    {
+                                        "s": "NYMEX:CL1!",
+                                        "d": "Crude Oil"
+                                    },
+                                    {
+                                        "s": "NYMEX:NG1!",
+                                        "d": "Natural Gas"
+                                    },
+                                    {
+                                        "s": "CBOT:ZC1!",
+                                        "d": "Corn"
+                                    }
+                                    ],
+                                    "originalTitle": "Futures"
+                                },
+                                {
+                                    "title": "Bonds",
+                                    "symbols": [
+                                    {
+                                        "s": "CME:GE1!",
+                                        "d": "Eurodollar"
+                                    },
+                                    {
+                                        "s": "CBOT:ZB1!",
+                                        "d": "T-Bond"
+                                    },
+                                    {
+                                        "s": "CBOT:UB1!",
+                                        "d": "Ultra T-Bond"
+                                    },
+                                    {
+                                        "s": "EUREX:FGBL1!",
+                                        "d": "Euro Bund"
+                                    },
+                                    {
+                                        "s": "EUREX:FBTP1!",
+                                        "d": "Euro BTP"
+                                    },
+                                    {
+                                        "s": "EUREX:FGBM1!",
+                                        "d": "Euro BOBL"
+                                    }
+                                    ],
+                                    "originalTitle": "Bonds"
+                                },
+                                {
+                                    "title": "Forex",
+                                    "symbols": [
+                                    {
+                                        "s": "FX:EURUSD",
+                                        "d": "EUR/USD"
+                                    },
+                                    {
+                                        "s": "FX:GBPUSD",
+                                        "d": "GBP/USD"
+                                    },
+                                    {
+                                        "s": "FX:USDJPY",
+                                        "d": "USD/JPY"
+                                    },
+                                    {
+                                        "s": "FX:USDCHF",
+                                        "d": "USD/CHF"
+                                    },
+                                    {
+                                        "s": "FX:AUDUSD",
+                                        "d": "AUD/USD"
+                                    },
+                                    {
+                                        "s": "FX:USDCAD",
+                                        "d": "USD/CAD"
+                                    }
+                                    ],
+                                    "originalTitle": "Forex"
+                                }
+                                ]
+                            }
+                                </script>
+                            </div>
+                            <!-- TradingView Widget END -->
+                        </div>
+
+                        <div class="col-sm-12 col-lg-7">
+                            <div class="header-ryt-container">
+                                <h3 class="section-large-txt light-font">About FalconFx Trade</h3>
+                                <p class="normal-txt heading-sm light-font">
+                                    FalconFx Trade company was created from the passion of a group of people with similar interests, who have developed a passive income 
+                                    guarantee system for people who are looking for a quick way to multiply their assets. The plan developed by us allows everyone, even basic 
+                                    investors, to achieve a guaranteed profit. Our diversification of funds allows for rational investments in at least 14 industries in which 
+                                    we can invest the investor funds entrusted to us.
+                                </p>
+                                
+                                <p class="normal-txt heading-sm light-font">
+                                    FalconFx Trade Business model above all, reliable and reasonable management of the assets of their clients. Anyone can become our customer 
+                                    through a minimum contribution of $10 which entitles to participate in investment projects achieving the aforementioned guaranteed profits. 
+                                    Our business model was created for every, even the smallest investor and is addressed to people from all over the world. By accumulating funds, 
+                                    we are able to realistically offer guaranteed profits to our investors. Joining the group of our investors is very easy. Simply register your 
+                                    account, without any verification, make any deposit and start enjoying the passive income you receive every 10 days.
+                                </p>
+
+                                <p class="normal-txt heading-sm light-font">
+                                    We give you various possibilities to multiply your profits. You can reinvest earned money every day, in addition you can also use our Affiliate 
+                                    Program, which offers you the possibility of unlimited earnings by recommending our site to others. Even if you don't have your own deposit, you 
+                                    are entitled to make a profit from every deposit that your referrals will make. All these factors can contribute to the fact that you multiply your 
+                                    finances several times, using our platform on a daily basis. We strongly encourage you to use our platform and advertise it among your friends or 
+                                    others using your social media, blogs, internet forums or private or commercial websites.
+                                </p>
+
+                                <p class="normal-txt heading-sm light-font">
+                                    We are a team of people who understand the needs of our investors. We understand and appreciate how much trust you place in us and we promise to do 
+                                    everything to achieve your financial goals. Our business plan assumes that there will be no complications in achieving the objectives of our investment 
+                                    plans.
+                                </p>
+                            </div>
+                        </div>                    
+                    </div>
+                </div>
+            </section>
+
+        <!-- Closed ----------#####---------- -->
+
+
+
+
+        
+
+        <!-- ----------#####---------- Investment Plans (Section) starts here ----------#####---------- -->
+        
+            <section class="container-fluid section-general blue-back">
+                <div class="container">
+                    <div class="row">
+                        <!-- Investment Plans text container -->
+                        <div class="col-12">
+                            <div class="">
+                                <h3 class="section-large-txt" style="color: #fff;">Our Investment Plans</h3>
+                                <p class="normal-txt light-font">
+                                    Choose how you want to invest with us.
+                                </p>
+                            </div>
+                        </div> 
+                        
+                        <!-- Investment Plans card container -->
+                        <div class="col-sm-12 col-md-6 col-lg-4 p-2">
+                            <div class="invest-card">
+                                <div class="invest-card-content light-font">Smart Fund</div>
+                                <h4  class="mb-3 heading light-font" style="line-height: 0.8;">3%</h4>
+                                <p class="normal-txt heading-sm light-font" style="line-height: 0;">12 Hours</p>
+                                <div class="col-12 card-line"></div>
+                                <div class="col-12 card-details light-font normal-txt"><div>Min. Possible deposit:</div> <div>$350</div></div>
+                                <div class="col-12 card-details light-font normal-txt"><div>Max. Possible deposit:</div> <div>$5000</div></div>
+                                <div class="col-12 card-details light-font normal-txt"><div>Duration</div> <div>10 days</div></div>
+                                <div class="col-12 card-details light-font normal-txt shift"><div>Gift Bonus</div> <div>$0</div></div>
+                                <p class="btn-auto"><a href="/users/login" class="dark-btn" style="margin-top: 0.85rem;padding: 9px  22.5px 10.55px  22.5px;">Choose Plan</a></p>
+                            </div>
+                        </div>
+                        
+                        <!-- Investment Plans card container -->
+                        <div class="col-sm-12 col-md-6 col-lg-4 p-2">
+                            <div class="invest-card">
+                                <div class="invest-card-content light-font">Platinum</div>
+                                <h4  class="mb-3 heading  light-font" style="line-height: 0.8;">9%</h4>
+                                <p class="normal-txt heading-sm light-font" style="line-height: 0;">24 Hours</p>
+                                <div class="col-12 card-line"></div>
+                                <div class="col-12 card-details light-font normal-txt"><div>Min. Possible deposit:</div> <div>$5000</div></div>
+                                <div class="col-12 card-details light-font normal-txt"><div>Max. Possible deposit:</div> <div>$15000</div></div>
+                                <div class="col-12 card-details light-font normal-txt"><div>Duration</div> <div>10 days</div></div>
+                                <div class="col-12 card-details light-font normal-txt shift"><div>Gift Bonus</div> <div>$0</div></div>
+                                <p class="btn-auto"><a href="/users/login" class="dark-btn" style="margin-top: 0.85rem;padding: 9px  22.5px 10.55px  22.5px;">Choose Plan</a></p>
+                            </div>
+                        </div>
+                        
+                        <!-- Investment Plans card container -->
+                        <div class="col-sm-12 col-md-6 col-lg-4 p-2 mx-auto">
+                            <div class="invest-card">
+                                <div class="invest-card-content light-font">Ultimate</div>
+                                <h4  class="mb-3 heading  light-font" style="line-height: 0.8;">13%</h4>
+                                <p class="normal-txt heading-sm light-font" style="line-height: 0;">24 Hours</p>
+                                <div class="col-12 card-line"></div>
+                                <div class="col-12 card-details light-font normal-txt"><div>Min. Possible deposit:</div> <div>$15000</div></div>
+                                <div class="col-12 card-details light-font normal-txt"><div>Max. Possible deposit:</div> <div>$45000</div></div>
+                                <div class="col-12 card-details light-font normal-txt"><div>Duration</div> <div>10 days</div></div>
+                                <div class="col-12 card-details light-font normal-txt shift"><div>Gift Bonus</div> <div>$0</div></div>
+                                <p class="btn-auto"><a href="/users/login" class="dark-btn" style="margin-top: 0.85rem;padding: 9px 22.5px 10.55px  22.5px;">Choose Plan</a></p>
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+            </section>
+
+        <!-- Closed ----------#####---------- -->
+
+
+
+
+        
+
+        <!-- ----------#####---------- Testimonials (Section) starts here ----------#####---------- -->
+        
+            <section class="container-fluid testi-con section-general">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="section-title">
+                                <h2 style="color: #eaeaea;">Testimonials</h2>
+                                <p style="color: #eaeaea;">Don't take our word for it. Here's what some of our clients have to say about us.</p>
+                            </div>
+                        </div>
+                        <div class="testimonials-carousel-wrap">
+                            <div class="listing-carousel-button listing-carousel-button-next"><i class="fa fa-caret-right" style="color: #fff"></i></div>
+                            <div class="listing-carousel-button listing-carousel-button-prev"><i class="fa fa-caret-left" style="color: #fff"></i></div>
+                            <div class="testimonials-carousel">
+                                <div class="swiper-container">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="testi-item">
+                                                <div class="testi-avatar"><img src="public/image/home/testImg/21.png"></div>
+                                                <div class="testimonials-text-before"><i class="fa fa-quote-right"></i></div>
+                                                <div class="testimonials-text">
+                                                    <div class="listing-rating">
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                    </div>
+                                                    <p style="color: #eaeaea;font-size: 1em;">
+                                                        My life and the lives of my children have both changed as a result of the consistent profits I've withdrawn from FalconFX Trade. Thank you.
+                                                    </p>
+                                                    <a href="#" class="text-link"></a>
+                                                    <div class="testimonials-avatar">
+                                                        <h3>Sarah</h3>
+                                                        <h4>Marketer</h4>
+                                                    </div>
+                                                </div>
+                                                <div class="testimonials-text-after"><i class="fa fa-quote-left"></i></div> 
+                                            </div>
+                                        </div>
+                    
+                                        <!--second--->
+                                        <div class="swiper-slide">
+                                            <div class="testi-item">
+                                                <div class="testi-avatar"><img src="public/image/home/testImg/6.png"></div>
+                                                <div class="testimonials-text-before"><i class="fa fa-quote-right"></i></div>
+                                                <div class="testimonials-text">
+                                                    <div class="listing-rating">
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                    </div>
+                                                    <p style="color: #eaeaea;font-size: 1em;">
+                                                        FalconFX Trade has developed a personal plan for me that has allowed me take much greater control of my financial affairs and plan for the future.
+                                                    </p>
+                                                    <a href="#" class="text-link"></a>
+                                                    <div class="testimonials-avatar">
+                                                        <h3>djmzstk</h3>
+                                                        <h4>Photographer</h4>
+                                                    </div>
+                                                </div>
+                                                <div class="testimonials-text-after"><i class="fa fa-quote-left"></i></div> 
+                                            </div>
+                                        </div>
+                                        <!--third-->
+                    
+                                        <div class="swiper-slide">
+                                            <div class="testi-item">
+                                                <div class="testi-avatar"><img src="public/image/home/testImg/4.png"></div>
+                                                <div class="testimonials-text-before"><i class="fa fa-quote-right"></i></div>
+                                                <div class="testimonials-text">
+                                                    <div class="listing-rating">
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                    </div>
+                                                    <p style="color: #eaeaea;font-size: 1em;">
+                                                        FalconFX Trade is a great and inituative platform for all people. 
+                                                        Also great instruments and a perfectly transparent system.
+                                                    </p>
+                                                    <a href="#" class="text-link"></a>
+                                                    <div class="testimonials-avatar">
+                                                        <h3>Mehmet</h3>
+                                                        <h4>Technologist</h4>
+                                                    </div>
+                                                </div>
+                                                <div class="testimonials-text-after"><i class="fa fa-quote-left"></i></div> 
+                                            </div>
+                                        </div>
+                    
+                                        <!--fourth-->
+                                        <div class="swiper-slide">
+                                            <div class="testi-item">
+                                                <div class="testi-avatar"><img src="public/image/home/testImg/3.png"></div>
+                                                <div class="testimonials-text-before"><i class="fa fa-quote-right"></i></div>
+                                                <div class="testimonials-text">
+                                                    <div class="listing-rating">
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                    </div>
+                                                    <p style="color: #eaeaea;font-size: 1em;">
+                                                        I recommend FalconFX Trade because they are consistent, have good investment 
+                                                        system, instant withdrawal and good Support system.
+                                                    </p>
+                                                    <a href="#" class="text-link"></a>
+                                                    <div class="testimonials-avatar">
+                                                        <h3>Tammy</h3>
+                                                        <h4>Designer</h4>
+                                                    </div>
+                                                </div>
+                                                <div class="testimonials-text-after"><i class="fa fa-quote-left"></i></div> 
+                                            </div>
+                                        </div>
+                                        <!--testi end-->
+                    
+                                    </div>
+                                </div>
+                            </div>
+                    
+                            <div class="tc-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        
+        <!-- Closed ----------#####---------- -->
+
+
+
+
+        <div style="height: 2em;width: 100%;"></div>
+
+
+
+      
+        <!-- Footer container -->
+        <%- include('partial/footer') %>
+
+
+
+    </body>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+    <script src="public/javascript/script.js"></script>
+
+    <!-- Option 1: Bootstrap Bundle with JQuery -->
+    <script src="public/javascript/jquery.js"></script>
+    <script src="node/bootstrap/dist/js/bootstrap.js"></script>
+    
+    <!-- Swiper javascript cdn link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.js"></script>
+
+    <!-- Counter script start -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.counter').counterUp({
+            delay: 10,
+            time: 1200
+            });
+        });
+
+
+
+        
+        // Testimonial slider script start
+        //   all ------------------
+        function initParadoxWay() {
+            "use strict";
+        
+            if ($(".testimonials-carousel").length > 0) {
+                var j2 = new Swiper(".testimonials-carousel .swiper-container", {
+                    preloadImages: false,
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                    loop: true,
+                    grabCursor: true,
+                    mousewheel: false,
+                    centeredSlides: true,
+                    pagination: {
+                        el: '.tc-pagination',
+                        clickable: true,
+                        dynamicBullets: true,
+                    },
+                    navigation: {
+                        nextEl: '.listing-carousel-button-next',
+                        prevEl: '.listing-carousel-button-prev',
+                    },
+                    breakpoints: {
+                        767: {
+                            slidesPerView: 2,
+                        },
+                        1024: {
+                            slidesPerView: 3,
+                        },
+                        
+                    }
+                });
+            }
+            
+        // bubbles -----------------
+            
+            
+            setInterval(function () {
+                var size = randomValue(sArray);
+                $('.bubbles').append('<div class="individual-bubble" style="left: ' + randomValue(bArray) + 'px; width: ' + size + 'px; height:' + size + 'px;"></div>');
+                $('.individual-bubble').animate({
+                    'bottom': '100%',
+                    'opacity': '-=0.7'
+                }, 4000, function () {
+                    $(this).remove()
+                });
+            }, 350);
+            
+        }
+
+        //   Init All ------------------
+        $(document).ready(function () {
+            initParadoxWay();
+        });
+        // Testimonial slider script end
+
+    </script>
+    <!-- Counter script end -->
+
+    
+</html>

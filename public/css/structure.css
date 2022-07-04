@@ -1,0 +1,319 @@
+:root{
+	/* Web background */
+	--web-white-background: #fff;
+	--web-light-background: #343a40;
+	--web-dark-background: #151515;
+
+	/* Border */
+	--border: gray;
+	--box-shadow: 0 .35rem 0.75rem rgba(0, 0, 0, 0.055);
+	
+	/* Web font */
+	--light-font: #eaeaea;
+	--dark-font: #fff;
+}
+
+/* General style */
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #343a40;
+    color: var(--dark-font);
+    display: inline;
+    font-family: 'Lora', serif;
+    height: 100vh;
+    overflow-x: hidden;
+    width: 100vw;
+}
+/* Scrollbar css style */
+::-webkit-scrollbar {
+    width: 8px;
+    background-color: #F5F5F5;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px rgb(0 0 0 / 30%);
+    background-color: var(--web-dark-background);
+}
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgb(0 0 0 / 30%);
+    border-radius: 10px;
+    background-color: #F5F5F5;
+}
+
+
+
+
+/* ---------------------------------------------------------- Dashboard general basic structure starts here ------------------------------------------------------------------ */
+
+/* Parent wrapper for all containers*/
+#wrapper {
+    padding-left: 0;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    z-index: 10;
+}
+
+
+
+/* ----- Toggle Styles start ------------------------------- */
+#wrapper.toggled {
+    padding-left: 250px;
+}
+.toggle-btn{
+    display: none; /* Display is set to none so widths greater than 1200px cænt toggle */
+}
+/* Javascript toggle feature start */
+#wrapper.toggled #sidebar-wrapper {
+    width: 250px;
+}
+#page-content-wrapper {
+    width: 100%;
+    position: absolute;
+    padding: 0px;
+}
+#wrapper.toggled #page-content-wrapper {
+    position: absolute;
+    margin-right: -250px;
+}
+/* Javascript toggle feature end */
+
+
+
+/* Side navigation menu wrapper */
+#sidebar-wrapper {
+    background: var(--web-dark-background);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    left: 250px;
+    margin-left: -250px;
+    overflow-x: hidden;
+    position: fixed;
+    transition: all 0.5s ease;
+    width: 0;
+    z-index: 1000;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+}
+
+
+
+/* ----- Dashboard responsive properties when button is toggled ----- */
+@media(max-width: 1200px){
+    body {
+        display: block;
+    }
+    .toggle-btn{
+        display: block; /* Display is set to block at mediaquery so only widths less than 1200px cæn toggle */
+    }
+}
+@media screen and (min-width:768px) and (max-width:1200px) {
+    #wrapper {
+        padding-left: 72.5px;
+    }
+    #wrapper.toggled {
+        padding-left: 250px;
+    }
+    #sidebar-wrapper {
+        width: 72.5px;
+    }
+    #page-content-wrapper {
+        margin-right: -72.5px;
+        position: relative;
+    }
+}
+@media(min-width:1200px) {
+    #wrapper {
+        padding-left: 250px;
+    }
+    #wrapper.toggled {
+        padding-left: 0;
+    }
+    #sidebar-wrapper {
+        width: 250px;
+    }
+    #page-content-wrapper {
+        padding: 0px;
+        position: relative;
+        width: 100%;
+    }
+    #wrapper.toggled #page-content-wrapper {
+        position: relative;
+        margin-right: 0;
+    }
+}
+
+/* ----- Toggle Styles end ------------------------------- */
+
+/* ---------------------------------------------------------- Dashboard general basic structure ends here ------------------------------------------------------------------ */
+
+
+
+
+
+/* ---------------------------------------------------------- Dashboard sidebar structure starts here ------------------------------------------------------------------ */
+
+/* This wrappers aim is to prevent overflow in our sidebar parent container*/
+.side-bar-inner-wrapper{
+    height: 100vh;
+    position: relative;
+    width: 250px;
+}
+
+
+/* Username for side bar display*/
+.user-name-wrapper{
+    background: #343a40;
+    border-bottom: 0.5px solid var(--dark-font);
+    position: relative;
+    padding: 12px 0px;
+    margin: 19px 16px 7.5px 16px;
+    width: 218px;
+}
+.user-icon{
+    background: transparent;
+    color: var(--dark-font);
+    font-size: 18px;
+    font-weight: 800;
+    margin: 3.5px 16px 10.5px 28px;
+}
+.user-text{
+    padding: 7.5px 0px;
+    font-size: 0.85em;
+    font-weight: 500;
+}
+
+
+
+/* ----- Main navigation button styles start here ------------------------------- */
+.nav-section{
+    display: flex;
+    flex-direction: column;
+    height: 82.5%;
+    justify-content: space-between;
+    margin: 0px 14px;
+    position: static;
+    width: 218px;
+}
+.side-nav-wrapper{
+    border-top-left-radius: 7.5px;
+    border-bottom-right-radius: 7.5px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    line-height: normal;
+    padding: 7px 20px 14px 10px;
+    margin-top: 10px;
+}
+.side-nav-wrapper:hover{
+    color: var(--white-font) !important;
+    box-shadow: 0px 1px 1.8px rgba(0, 0, 0, 0.01),  0px 2px 3.2px rgba(0, 0, 0, 0.035);
+    background: rgba(47, 62, 226, 0.3) !important;
+}
+
+@media(max-width: 1200px){
+    .side-nav-wrapper:hover{
+        color: var(--light-font) !important;
+        background: #2f3fe2 !important;
+    }
+}
+.menu-icon{
+    background: transparent;
+    color: #eaeaea;
+    font-size: 18px;
+    margin: 4px 16px 0px 17.5px;
+}
+.menu-text{
+    padding-top: 4.5px;
+    color: #eaeaea;
+    font-size: 0.825em;
+    font-weight: 400;
+}
+
+
+/* This style makes the dashboard button the first page when dashboard is reloaded */
+#dashboard{
+    color: var(--light-font);
+    background: #2f3fe2;
+}
+/* Spacing found at the bottom of the side navigation menu */
+.side-space-bottom{
+    height: 30px;
+    width: 100%;
+}
+
+/* ----- Main navigation button styles end here ------------------------------- */
+
+/* ---------------------------------------------------------- Dashboard sidebar structure ends here ------------------------------------------------------------------ */
+
+
+
+
+
+/* ---------------------------------------------------------- Dashboard display structure starts here ------------------------------------------------------------------ */
+
+/* ----- Dashboard header styles start here ------------------------------- */
+.dashboard-header{
+    background: #0000004d;
+    z-index: 999;
+    top: -10px;
+    box-shadow: var(--box-shadow);
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    justify-content: space-between;
+    position: sticky;
+    top: 0px;
+    width: 100%;
+}
+.header-right{
+    display: flex;
+    flex-direction: row;
+}
+/* Hamburger menu style */
+.ham-span{
+    margin: 10px 0px 0px 10px;
+}
+.head-icon{
+    color: var(--white-font);
+    font-size: 25px;
+    padding: 5px;
+}
+/* Website name style */
+.web-name{
+    font-size: 22.5px;
+    font-weight: 600;
+    padding: 10.75px 0px 0px 25px;
+}
+
+/* Exit icon */
+.head-btn{
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 9px 12.5px 0px 12.5px;
+    margin: 5px 20px 5px 10px;
+}
+.exit-icon{
+    font-size: 20px;
+}
+
+/* ----- Dashboard header styles end here ------------------------------- */
+
+/*  */
+.display-wrapper{
+    height: auto;
+    width: 100%;
+}
+.display{
+    background: var(--web-light-background);
+    height: auto;
+    margin: 0px auto;
+    position: sticky;
+    width: 100%;
+}

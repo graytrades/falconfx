@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Montserrat:300" rel="stylesheet">
+
+        <!-- Bootstrap css link -->
+        <link rel="stylesheet" href="../node/bootstrap/dist/css/bootstrap.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+        <!-- Main css link -->
+        <link rel="stylesheet" href="../public/css/style.css">
+
+        <title></title>
+    </head>
+    <body>
+        <!-- Nav-bar -->
+        <%- include('partial/header') %>
+
+
+
+        <!-- Chatbox -->
+        <a href="https://t.me/markhutchinson_official" target="_blank"><div class="chatbox"><img src="../public/image/foot/telegram.png" class="img-fluid" alt="" srcset=""></div></a>
+
+        
+
+
+        <div class="container-fluid general-head-section">
+            <div class="container">
+                <div class="row sign-up-pad d-flex justify-content-center">
+    
+                    <!-- Welcome container -->
+                    <div class="col-sm-12 col-md-6 col-lg-6 sign-pad">
+                        <div class="welcome-container signout-back">
+                            <p class="section-large-txt" style="color: #fff">Hello Friend!</p>
+                            <p class="normal-txt light-font">
+                                To get access to your dashboard, please sign up with your required details.
+                            </p>
+                            <p class="normal-txt light-font">
+                                Contact us on <a href="https://t.me/markhutchinson_official" target="_blank" class="sign-link">Telegram</a> or <a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSHvbGcNltKkjCZbmjZDbgrbknvLjhtTLsDzgRqKvwnntckddlpVcbvntCCXmldTBgmXbDGV" target="_blank" class="sign-link">falconFXTrade8@gmail.com</a> for more informations.
+                            </p>
+                            <p class="normal-txt light-font">
+                                Already have an Account?
+                            </p>
+                            <a href="/users/login" class="sign-btn">Sign In</a>
+                        </div>
+                    </div>
+                    
+                    
+                    <!-- Sign container -->
+                    <div class="col-sm-12 col-md-6 col-lg-4 sign-pad">
+                        <div class="sign-container">
+                            <p class="section-large-txt" style="color: #fff;">Create Account</p>
+                            <!-- <div class="icon-container">
+                                <div class="icon-wrap"><img src="../public/Image/sign/facebook-logo.png" alt="" srcset="" class="img-fluid"></div>
+                                <div class="icon-wrap"><img src="../public/Image/sign/google-letter-logo.png" alt="" srcset="" class="img-fluid"></div>
+                                <div class="icon-wrap"><img src="../public/Image/sign/twitter.png" alt="" srcset="" class="img-fluid"></div>
+                            </div> -->
+                            <p class="sign-txt normal-txt light-font">Use an E-mail account to create an account with us</p>
+    
+                            
+                            <!-- Error messages -->
+                            <%- include('partial/messages') %>
+
+                            <!-- Input form section -->
+                            <form action="/users/register" method="POST">
+                                <div class="form-group">
+                                    <div class="input-icon-wrap"><i class="fa img-fluid fa-solid fa-user"></i></div>
+                                    <input type="name" id="name" name="name" class="form-control form-input" placeholder="Enter Name" value="<%= typeof name != 'undefined' ? name : '' %>" required>
+                                </div>
+                                <div class="form-group">
+                                    <div class="input-icon-wrap"><i class="fa img-fluid fa-solid fa-envelope"></i></div>
+                                    <input type="email" id="email" name="email" class="form-control form-input" placeholder="Enter Email" value="<%= typeof email != 'undefined' ? email : '' %>" required>
+                                </div>
+                                <div class="form-group">
+                                    <div class="input-icon-wrap input-wrap-shift"><i class="fa img-fluid fa-solid fa-lock"></i></div>
+                                    <div style="display: flex;flex-direction: row;">
+                                        <input type="password" id="pass" name="password" class="form-control form-input" placeholder="Enter Password" value="<%= typeof password != 'undefined' ? password : '' %>" required>
+                                        <span id="visiblity-toggle" class="material-icons-outlined" style="color: rgb(210, 210, 210);">visibility</span>
+                                    </div>
+                                <div class="form-group">
+                                    <div class="input-icon-wrap input-wrap-shift"><i class="fa img-fluid fa-solid fa-lock"></i></div>
+                                    <div style="display: flex;flex-direction: row;">
+                                        <input type="password" id="password2" name="password2" class="form-control form-input" placeholder="Confirm Password" value="<%= typeof password2 != 'undefined' ? password2 : '' %>" required>
+                                        <span id="con-visiblity-toggle" class="material-icons-outlined" style="color: rgb(210, 210, 210);">visibility</span>
+                                    </div>
+                                </div>
+                                <!-- <div class="forgot-wrap"><a href="#" class="forgot-link">Forgot Password?</a></div> -->
+                                <button type="submit" onclick="document.location.href='/dashboard/'" class="btn btn-wrap1">Sign Up</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+
+                
+
+                <div class="col-12 normal-txt" style="margin: 5em 0 3em 0;text-align: center;color: #fff;">© FalconFXTrade 2022. All rights reserved.</div>
+
+            </div>
+        </div>
+
+
+
+    </body>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+    <script src="../public/javascript/script.js"></script>
+
+    <!-- Option 1: Bootstrap Bundle with JQuery -->
+    <script src="../public/javascript/jquery.js"></script>
+    <script src="../node/bootstrap/dist/js/bootstrap.js"></script>
+
+
+    <script>
+        const pass = document.querySelector('#pass')
+        const btn = document.querySelector('#visiblity-toggle')
+
+        btn.addEventListener('click', () => {
+            if (pass.type === "text") {
+                pass.type = "password";
+                btn.innerHTML = "visibility";
+            } else {
+                pass.type = "text";
+                btn.innerHTML = "visibility_off";
+
+            }
+        })
+
+
+        const conpass = document.querySelector('#password2')
+        const conbtn = document.querySelector('#con-visiblity-toggle')
+
+        conbtn.addEventListener('click', () => {
+            if (password2.type === "text") {
+                password2.type = "password";
+                conbtn.innerHTML = "visibility";
+            } else {
+                password2.type = "text";
+                conbtn.innerHTML = "visibility_off";
+
+            }
+        })
+    </script>
+    
+</html>

@@ -1,0 +1,1689 @@
+/* Chatbox */
+.chatbox{
+    background: #000;
+    height: 4.75rem;
+    position: fixed;
+    padding: 10px;
+    border-radius: 30px;
+    right: 30px;
+    bottom: 30px;
+    width: 4.75rem;
+    z-index: 50000000000000;
+}
+
+
+
+
+/* 
+-----------------------------------------####################------------------------------------------
+-----------------------------------------####################------------------------------------------
+-----------------------------------------####################------------------------------------------
+
+General syles - Start
+
+-----------------------------------------####################------------------------------------------
+-----------------------------------------####################------------------------------------------
+-----------------------------------------####################------------------------------------------
+*/
+
+/* Css variables list start */
+:root {
+    /* Background colors */
+    --web-light-background: #f5f5f5;
+    --web-dark-background: #151515;
+    --web-white-background: #fff;
+
+	--blue: #202dbd;
+	--dye: #6c757d;
+
+    
+    /* Button colors */
+    --dark-button: #020202;
+    --white-button: #fff;
+
+    /* Font colors */
+    --font-color-dark: #000;
+    --font-color-gray: #2e3641;
+    --font-color-light: #eaeaea;
+    --font-color-white: #fff;
+
+    /* Font sizes */
+    --general-smallest-text: 0.85em;
+    --general-small-text: 0.85em;
+    --general-medium-text: 1.25em;
+    --general-large-text: 1.45em;
+
+    /* Font weights */
+    --font-weight-small: 500;
+    --font-weight-medium: 500;
+    --font-weight-large: 500;
+}
+
+
+/* 
+    -------------------#######-------------------- General notes -------------------#######--------------------
+*/
+
+.falcon{
+    height: 100%;
+    width: 100%;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+html{
+    overflow-x: hidden;
+}
+body {
+    background: #343a40;
+    font-family: 'Lora', serif;
+    height: auto;
+    margin: 0px;
+    padding: 0px;
+    width: 100vw;
+}
+
+/* Scrollbar css style start ----- */
+::-webkit-scrollbar {
+    width: 8px;
+    background-color: #F5F5F5;
+}
+::-webkit-scrollbar-thumb {
+    box-shadow: inset 0 0 6px rgb(0 0 0 / 30%);
+    background-color: var(--web-dark-background);
+}
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgb(0 0 0 / 30%);
+    background-color: #F5F5F5;
+}
+/* Scrollbar css style end ----- */
+
+/* 
+-----------------------------------------####################------------------------------------------
+-----------------------------------------####################------------------------------------------
+-----------------------------------------####################------------------------------------------
+
+General styles - End
+
+-----------------------------------------####################------------------------------------------
+-----------------------------------------####################------------------------------------------
+-----------------------------------------####################------------------------------------------
+*/
+
+
+
+
+
+
+
+
+
+
+/* 
+-----------------------------------------####################------------------------------------------
+-----------------------------------------####################------------------------------------------
+-----------------------------------------####################------------------------------------------
+
+Navigation menu - Start
+
+-----------------------------------------####################------------------------------------------
+-----------------------------------------####################------------------------------------------
+-----------------------------------------####################------------------------------------------
+*/
+
+.project-nav-menu{
+    background: rgba(0, 0, 0, 0.9);
+    box-shadow: 0 1.5px 3px 0 rgb(0 0 0 / 7.5%), 0 2px 4px 0 rgb(0 0 0 / 12.5%);
+    height: 62.5px;
+    position: fixed;
+    padding-top: 10px;
+}
+.head-anc{
+    color: #eaeaea;
+}
+.nav {
+    padding-top: 6.25px;
+    height: 62.5px;
+    justify-content: space-between;
+    position: fixed;
+}
+.nav > .nav-header {
+    display: inline;
+}
+.nav > .nav-header > .nav-title {
+    color: #eaeaea;
+    display: inline-block;
+    font-size: 22px;
+    font-weight: var(--font-weight-large);
+    height: 50px;
+    padding: 9.75px 10px;
+}
+/* Logo css end */
+
+/* Toggle btn css */
+.nav > .nav-btn {
+    display: none;
+}
+
+/* Nav drop-down css start */
+.nav > .nav-links {
+    display: inline;
+    float: right;
+}
+.nav > .nav-links > ul li a{
+    color: var(--font-color-dark);
+    display: block;
+    line-height: 40px;
+    font-size: var(--general-smallest-text);
+    font-weight: var(--font-weight-medium);
+    margin:  0 5px;
+    padding: 0 9.5px;
+    text-decoration: none;
+    transition: ease-in-out 0.175s;
+
+}
+.nav > .nav-links > ul{
+    list-style: none;
+    margin-top: 5px;
+    padding: 0;
+    position: relative;
+
+}
+
+.get-started-btn {
+    background: var(--blue);
+    box-shadow: 0 3px 6px 0 rgba(190, 195, 255, 0.07), 0 5px 15px 0 rgb(190, 195, 255 / 9%);
+    color: var(--font-color-white);
+    display: inline-block;
+    font-weight: var(--font-weight-small);
+    font-size: var(--general-smallest-text);
+    margin-top: 3.5px;
+    margin-left: 5px;
+    padding: 7px 20px 6px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.3s;
+    white-space: nowrap;
+}
+.get-started-btn:hover {
+    color: var(--font-color-white);
+    padding: 8.5px 19px 7.5px 19px;
+    text-decoration: none;
+}
+
+.nav > .nav-links > ul li{
+    display: inline-block;
+    transition: linear 0.25s;
+}
+.nav > .nav-links > ul li:hover{
+    background-color: rgba(8, 9, 9, 0.107);
+}
+.nav > .nav-links > ul li:hover > a{
+    color: #eaeaea;
+    font-weight: var(--font-weight-medium);
+}
+.nav > #nav-check {
+    display: none;
+}
+
+/* Mobile navigation responsiveness css */
+@media (max-width: 991px) {
+    .nav > .nav-btn {
+        display: inline-block;
+        padding-top: 6.25px;
+        position: absolute;
+        right: 15px;
+        top: 0px;
+    }
+    .nav > .nav-btn > label {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        padding: 13px;
+    }
+    .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+        background-color: rgba(234, 234, 234, 0.275);
+    }
+    .nav > .nav-btn > label > span {
+        display: block;
+        width: 25px;
+        height: 10px;
+        border-top: 2px solid #eaeaea;
+    }
+    .nav > .nav-links {
+        position: absolute;
+        display: block;
+        width: 100%;
+        background: #343a40;
+        box-shadow: 0 1.5px 3px 0 rgb(60 72 88 / 7.5%), 0 2px 4px 0 rgb(60 72 88 / 12.5%);
+        transition: all 0.3s ease-in;
+        overflow-y: hidden;
+        top: 50px;
+        left: 0px;
+    }
+    .nav > .nav-links > ul li a {
+        display: block;
+        margin-left: 10%;
+        width: 80%;
+    }
+    .nav-li-shift{
+        margin-top: 35px;
+    }
+    .nav-btn-shift{
+        margin-left: 6.5vw;
+    }
+    /*   */
+
+    .nav > .nav-links > ul li{
+        display: block;
+        margin-bottom: 20px;
+        padding: 0;
+        background-color: transparent;
+
+    }
+    .nav > .nav-links > ul li a{
+        margin-left: 5vw;
+    }
+
+    /*   */
+    .nav > #nav-check:not(:checked) ~ .nav-links {
+        height: 0px;
+    }
+    .nav > #nav-check:checked ~ .nav-links {
+        height: calc(100vh - 50px);
+    }
+
+
+    /* Get started button for mobile */
+    .get-started-btn {
+        cursor: pointer;
+        font-weight: var(--font-weight-small);
+        font-size: var(--general-smallest-text);
+        padding: 8.5px 22.5px 8.5px 22.5px;
+    }
+    .get-started-btn:hover {
+        padding: 8.5px 19px 7.5px 19px;
+        text-decoration: none;
+    }
+
+    /* Mobile shift for image */
+    .head-img{
+        margin-top: 2.5em;
+    }
+
+    /* Mobile shift for why container */
+    .why-sep{
+        margin-top: 2em;
+    }
+    .mx-card{
+        cursor: pointer;
+        margin-top: 0px;
+    }
+}
+
+
+/* 
+-----------------------------------------####################------------------------------------------
+-----------------------------------------####################------------------------------------------
+-----------------------------------------####################------------------------------------------
+
+Navigation menu - End
+
+-----------------------------------------####################------------------------------------------
+-----------------------------------------####################------------------------------------------
+-----------------------------------------####################------------------------------------------
+*/
+
+
+
+
+
+
+
+
+
+
+/* 
+-----------------------------------------####################------------------------------------------
+-----------------------------------------####################------------------------------------------
+-----------------------------------------####################------------------------------------------
+
+Home - Start
+
+-----------------------------------------####################------------------------------------------
+-----------------------------------------####################------------------------------------------
+-----------------------------------------####################------------------------------------------
+*/
+
+
+/* 
+-----------------------------------------####################------------------------------------------
+Header - Start
+-----------------------------------------####################------------------------------------------
+*/
+.light-font{
+    color: #eaeaea;
+}
+
+.header-con{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: darken;
+    padding-top: 9.5em;
+    padding-bottom: 3.15em;
+}
+.head-content{
+    background: rgba(234, 234, 234, 0.175);
+    backdrop-filter: blur(10px);
+    border-radius: 0px 10px;
+    box-shadow: 0 0 6px rgb(60 72 88 / 15%);
+    color: var(--font-color-white);
+    display: inline-block;
+    font-size: var(--general-smallest-text);
+    font-weight: var(--font-weight-small);
+    margin-bottom: 1rem;
+    padding: 8px 15px;
+}
+.heading {
+    font-size: 1.9em;
+    font-weight: var(--font-weight-medium);
+    line-height: 1.35;
+}
+
+
+
+/* Normal text css start*/
+.dark-font{
+    color: var(--font-color-dark);
+}
+.grey-font{
+    color: var(--font-color-gray);
+}
+.light-font{
+    color: var(--font-color-light);
+}
+.white-font{
+    color: var(--font-color-white);
+}
+.normal-txt{
+    font-size: var(--general-small-text);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.85;
+    padding-bottom: 0.25em;
+    letter-spacing: 0.035em;
+}
+/* Normal text css end*/
+
+
+
+/* Website header buttons */
+.heading-btn {
+    background: var(--blue);
+    box-shadow: 0 3px 6px 0 rgb(31 38 135 / 7%), 0 5px 15px 0 rgb(31 38 135 / 9%);
+    color: var(--font-color-light);
+    cursor: pointer;
+    display: inline-block;
+    font-weight: var(--font-weight-medium);
+    font-size: var(--general-smallest-text);
+    padding: 10.55px 20px 10.55px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.3s;
+    white-space: nowrap;
+}
+.heading-btn:hover {
+    color: var(--font-color-light);
+    padding: 12.55px 175px;
+    text-decoration: none;
+}
+
+/* 
+-----------------------------------------####################------------------------------------------
+Header - End
+-----------------------------------------####################------------------------------------------
+*/
+
+
+
+/* 
+-----------------------------------------####################------------------------------------------
+General style - Start
+-----------------------------------------####################------------------------------------------
+*/
+/* General padding style used for all sections */
+.section-general{
+    padding-top: 3.15em;
+    padding-bottom: 3.15em;
+}
+
+/* General text style used for all large texts */
+.section-large-txt{
+    font-size: var(--general-large-text);
+    font-weight:  var(--font-weight-medium);
+    line-height: 1.4;
+    padding-bottom: 0.25em;
+}
+/* Website header buttons */
+.dark-btn {
+    background: var(--blue);
+    color: var(--font-color-light);
+    cursor: pointer;
+    display: inline-block;
+    font-weight: var(--font-weight-small);
+    font-size: var(--general-smallest-text);
+    padding: 10.55px 20px 10.55px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.3s;
+    white-space: nowrap;
+}
+.dark-btn:hover {
+    color: var(--font-color-light);
+    padding: 10.55px 15px 10.55px 15px;
+    text-decoration: none;
+}
+
+/* 
+-----------------------------------------####################------------------------------------------
+General style - End
+-----------------------------------------####################------------------------------------------
+*/
+
+
+
+
+/* Mobile navigation responsiveness css */
+@media (min-width: 450px) and  (max-width: 991px) {
+    .tab-align{
+        text-align: center;
+    }
+    .head-content{
+        margin: 0 auto;
+    }
+}
+
+
+/* 
+-----------------------------------------####################------------------------------------------
+About us - Start
+-----------------------------------------####################------------------------------------------
+*/
+
+/* Column Reverse property */
+@media (max-width: 1200px) {
+    .abt-us{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .tradingview-margin{
+        margin-top: 35px;
+    }
+    .text-align{
+        text-align: center;
+    }
+}
+
+/* 
+-----------------------------------------####################------------------------------------------
+About us - End
+-----------------------------------------####################------------------------------------------
+*/
+
+
+
+/* 
+-----------------------------------------####################------------------------------------------
+Why choose us - Start
+-----------------------------------------####################------------------------------------------
+*/
+
+.why-wrap{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../image/home/earnimg/background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: darken;
+}
+
+.card-container{
+    background: var(--web-light-background);
+    box-shadow: 0 1px 2.2px 0 rgba(254, 254, 255, 0.016), 0 1.5px 2.5px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 0px 10px;
+    padding: 5px 0px;
+}
+.card-txt{
+    color: var(--font-color-gray);
+    font-size: var(--general-small-text);
+    font-weight:  var(--font-weight-medium);
+    padding-right: 7.5px;
+}
+.svg-container{
+    float: right;
+    height: 45px;
+    width: 45px;
+}
+@media screen and (min-width: 991px) {
+    .mx-card{
+        cursor: pointer;
+        margin-top: 4.15em;
+    }
+}
+
+/* 
+-----------------------------------------####################------------------------------------------
+Why choose us  - End
+-----------------------------------------####################------------------------------------------
+*/
+
+
+
+/* 
+-----------------------------------------####################------------------------------------------
+Earn with us - Start
+-----------------------------------------####################------------------------------------------
+*/
+
+.card-lg-txt {
+    color: var(--font-color-white);
+    font-size: var(--general-medium-text);
+    font-weight:  var(--font-weight-medium);
+    margin-bottom: 0.25em;
+}
+.why-txt{
+    color: var(--font-color-light);
+    font-weight: var(--font-weight-medium);
+    padding-right: 5px;
+    padding-bottom: 1rem;
+}
+.why-background{
+    background: transparent;
+    padding: 1.2em 0;
+}
+
+/* 
+-----------------------------------------####################------------------------------------------
+Earn with us - End
+-----------------------------------------####################------------------------------------------
+*/
+
+
+
+/* 
+-----------------------------------------####################------------------------------------------
+Invest - Start
+-----------------------------------------####################------------------------------------------
+*/
+
+.invest-card-content{
+    background: rgba(0, 0, 0, 0.335);
+    border-radius: 5.5px 0px;
+    box-shadow: 0 0 3.5px rgba(0, 0, 0, 0.25);
+    display: inline-block;
+    font-size: var(--general-smallest-text);
+    font-weight: var(--font-weight-medium);
+    margin-bottom: 1rem;
+    padding: 8px 15px;
+}
+.invest-card{
+    background: #0000004D;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 2.5px 5px 0 rgba(0, 0, 0, 0.15);
+    padding: 30px 25px 7.5px 25px;
+}
+.card-line{
+    background: #000;
+    box-shadow: 0 0 3.5px rgb(60 72 88 / 15%);
+    margin-bottom: 0.85rem;
+    margin-top: 0.85rem;
+    padding: 1px 0 0 0;
+}
+.card-details{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 3px 0px;
+}
+
+.shift{
+    margin-bottom: 20px;
+}
+
+.blue-back{
+    background: #343a40;
+}
+.btn-auto{
+    padding-bottom: 0px;
+    text-align: center;
+}
+
+/* 
+-----------------------------------------####################------------------------------------------
+Invest - End
+-----------------------------------------####################------------------------------------------
+*/
+
+
+
+
+/* 
+-----------------------------------------####################------------------------------------------
+Testimonial - Start
+-----------------------------------------####################------------------------------------------
+*/
+
+.testi-con{
+    background: #343a40;
+	float: left;
+	font-size: var(--general-small-text);
+    overflow-x: hidden;
+	position: relative;
+	text-align: center;
+	z-index: 1;
+}
+.section-title{
+	float: left;
+	position: relative;
+	width: 100%;
+	padding-bottom: 40px; 
+}
+.section-title p{
+	font-size: 1em;
+    font-weight: var(--font-weight-medium);
+	line-height: 20px;
+	margin: 0 auto;
+    text-align: center;
+}
+.testimonials-carousel-wrap{
+    overflow-x: hidden;
+}
+.section-title h2 {
+	float: left;
+	width: 100%;
+	text-align: center;
+	font-size: 2em;
+	font-weight: 700;
+	position: relative;
+    text-align: center;
+}
+.section-separator {
+	float: left;
+	width: 100%;
+	position: relative;
+	margin: 20px 0;
+}
+.section-separator:before{
+	content: '';
+	position: absolute;
+	left: 50%;
+	top: 0;
+	height: 3px;
+	width: 50px;
+	border-radius: 3px;
+	z-index: 2;
+	background-color: var(--blue);
+	margin-left: -25px;
+}
+.swiper-container {
+	width: 100%;
+	height: 100%;
+}
+.listing-carousel-button{
+	position: absolute;
+	top: 50%;
+	width: 80px;
+	height: 50px;
+	line-height: 50px;
+	margin-top: -25px;
+	z-index: 100;
+	cursor: pointer;
+	background: var(--blue);
+	box-shadow: 0 9px 26px rgba(58, 87,135,0.45);
+	transition: all 200ms linear;
+	outline: none;
+}
+.listing-carousel-button.listing-carousel-button-next{
+	right: -30px;
+	padding-right: 20px;
+	border-radius: 60px 0 0 60px;
+}
+.listing-carousel-button.listing-carousel-button-prev{
+	left: -30px;
+	padding-left: 20px;
+	border-radius: 0 60px 60px 0;
+}
+.listing-carousel-button.listing-carousel-button-next:hover{
+	right: -15px;
+	background: rgba(32, 45, 189, 0.45);
+}
+.listing-carousel-button.listing-carousel-button-prev:hover{
+	left: -15px;
+	background: rgba(32, 45, 189, 0.45);
+}
+.testi-item {
+	transition: all .3s ease-in-out;
+	transform: scale(0.9);
+	opacity: 0.9;
+}
+.testimonials-text {
+	padding: 75px 50px 75px;
+	overflow:hidden;
+	background: #aaaaaa4d;
+	border: 1px solid rgba(225, 225, 225, 0.25);
+	border-radius: 1px;
+	transition: all .3s ease-in-out;
+}
+.testimonials-text-after{
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: inherit;
+	position: absolute;
+	color: #0000004D;
+	opacity: .3;
+	font-size: 35px;
+	transition: all 400ms linear;
+	bottom: 25px;
+	right: 30px;
+}
+.testimonials-text-before{
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: inherit;
+	position: absolute;
+	color: #00000095;
+	opacity: .3;
+	font-size: 35px;
+	transition: all 400ms linear;
+	top: 25px;
+	left: 30px;
+}
+.testimonials-text .listing-rating{
+	float: none;
+	display: inline-block;
+    font-size: 1.35em;
+	margin-bottom: 12px;
+}
+.listing-rating i{
+	color: var(--web-dark-background);
+}
+.testimonials-avatar h3{
+	font-weight: 600;
+	color: #7d93b2;
+	font-size: 1.5em;
+}
+.testimonials-avatar h4{
+    color: #eaeaea;
+    font-weight: 400;
+    font-size: 1.25em;
+    padding-top: 6px;
+}
+.testimonials-carousel .swiper-slide{
+	padding: 30px 0;
+}	 
+.testi-avatar{
+	position: absolute;
+	left: 50%;
+	top: -30px;
+	width: 90px;
+	height: 90px;
+	margin-left: -45px;
+	z-index: 20;
+}
+.testi-avatar img{
+	width: 90px;
+	height: 90px;
+	float: left;
+	border-radius: 100%;
+	border:6px solid #0000004D;
+	box-shadow: 0 9px 26px rgba(0, 0, 0, 0.1);
+}
+.swiper-slide-active .testimonials-text {
+	background: #0000004D;
+	box-shadow: 0 9px 26px rgba(0, 0, 0, 0.1);
+}
+.testimonials-text p{
+	color: var(--font-color-gray);
+	font-size: var(--general-small-text);
+	line-height: 24px;
+	padding-bottom: 10px;
+	font-weight:  var(--font-weight-medium);
+}
+.text-link{
+	position: absolute;
+	bottom:0;
+	padding: 15px 0;
+	border-radius: 10px 10px 0 0;
+	background: #0000004D;
+	border: 1px solid #0000004D;
+	box-shadow: 0 10px 15px rgba(0,0,0,0.03);
+	left: 50%;
+	width: 200px;
+	margin-left: -100px;
+}
+.swiper-slide-active .testi-item{
+	opacity: 1;
+	transform: scale(1.0);
+}
+.tc-pagination{
+	float: left;
+	margin-top: 10px;
+	width: 100% !important;
+}
+.tc-pagination_wrap {
+	position: absolute;
+	bottom: -40px;
+	left: 0;
+	width: 100%;
+}
+.tc-pagination2{
+	float: none;
+	display: inline-block;
+	padding: 14px 0;
+	background: #fff;
+	border-radius: 30px;
+	min-width: 250px;
+	border-bottom: 0;
+}
+.tc-pagination .swiper-pagination-bullet, .tc-pagination2.swiper-pagination-bullet{
+	opacity: 1;
+	background: var(--blue);
+	margin:0 2px;
+	width: 10px;
+	height: 10px;
+	transition: all 300ms ease-in-out;    
+}
+
+/* 
+-----------------------------------------####################------------------------------------------
+Testimonial - End
+-----------------------------------------####################------------------------------------------
+*/
+
+
+
+/* 
+-----------------------------------------####################------------------------------------------
+Earn with us - Start
+-----------------------------------------####################------------------------------------------
+*/
+
+.count-back{
+    background: url("../image/home/countImg/background.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: darken;
+}
+.counter-box {
+    align-content: center;
+    background: rgb(255, 255, 255);
+    box-shadow: rgba(31, 38, 135, 0.13) 0px 3px 6px 0px, rgba(31, 38, 135, 0.27) 0px 5px 15px 0px;
+    height: auto;
+    justify-content: center;
+    text-align: center;
+    padding: 20px 0px;
+}
+.counter-icon-wrap {
+    height: 60px;
+    width: 60px;
+    margin: auto auto 10px;
+}
+.counter-figure {
+    font-size: 2.2em;
+    font-weight:  var(--font-weight-large);
+}
+.counter-discription {
+    font-size: 1.3em;
+    font-weight:  var(--font-weight-medium);
+}
+
+/* 
+-----------------------------------------####################------------------------------------------
+Earn with us - End
+-----------------------------------------####################------------------------------------------
+*/
+
+/* 
+-----------------------------------------####################------------------------------------------
+-----------------------------------------####################------------------------------------------
+-----------------------------------------####################------------------------------------------
+
+Home - End
+
+-----------------------------------------####################------------------------------------------
+-----------------------------------------####################------------------------------------------
+-----------------------------------------####################------------------------------------------
+*/
+
+
+
+
+
+
+
+
+
+
+/* 
+-----------------------------------------####################------------------------------------------
+-----------------------------------------####################------------------------------------------
+-----------------------------------------####################------------------------------------------
+
+Footer syles - Start
+
+-----------------------------------------####################------------------------------------------
+-----------------------------------------####################------------------------------------------
+-----------------------------------------####################------------------------------------------
+*/
+
+.foot-wrap{
+    background: #343a40;
+}
+
+
+.pay-container{
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+.footer-icon {
+    height: 25px;
+    margin: auto;
+    width: 25px;
+}
+.font-span{
+    font-weight:  var(--font-weight-medium);
+}
+.foot-nav-anc {
+    color: var(--font-color-dark);
+    font-size: var(--general-smallest-text);
+    font-weight:  var(--font-weight-medium);
+    text-decoration: none;
+}
+.foot-nav-anc:hover {
+    color: var(--font-color-dark);
+    font-weight:  var(--font-weight-large);
+    text-decoration: none;
+}
+
+/* To move the large texts eg navigation conatainer footer */
+.card-lg-txt-foot {
+    margin-bottom: 0.65em;
+}
+
+.footer-info {
+    display: flex;
+    flex-direction: row;
+}
+.footer-info-icon {
+    height: 25px;
+    margin: auto 7.5px;
+    width: 25px;
+}
+.footer-info-line {
+    background: var(--web-dark-background);
+    border-radius: 225px;
+    height: 35px;
+    margin: auto;
+    margin-left: 0px;
+    margin-right: 0px;
+    position: relative;
+    width: 2px;
+}
+.info-foot-txt{
+    color: var(--font-color-dark);
+    font-size: var(--general-small-text);
+    font-weight: var(--font-weight-medium);
+    padding: 0px 0px 0px 7.5px;
+}
+.copy-right-txt{
+    color: #eaeaea;
+    font-size: var(--general-smallest-text);
+    font-weight:  var(--font-weight-medium);
+    margin-top: 15px;
+    margin-bottom: 0.25em;
+}
+
+.foot-link{
+    color: #eaeaea;
+    font-size: var(--general-small-text);
+    font-weight: var(--font-weight-medium);
+    text-transform: none;
+}
+.foot-link:hover{
+    color: #eaeaea;
+    text-transform: none;
+}
+.sign-link{
+    color: var(--font-color-light);
+    font-size: var(--general-small-text);
+    font-weight: var(--font-weight-medium);
+    text-transform: none;
+    text-decoration: underline;
+}
+.sign-link:hover{
+    color: var(--font-color-light);
+    text-transform: none;
+}
+
+.foot-bot{
+    padding: 0 15px;
+}
+@media screen and (min-width: 991px) {
+    .foot-bot{
+        padding: 17.5px;
+    }
+}
+
+/* 
+-----------------------------------------####################------------------------------------------
+-----------------------------------------####################------------------------------------------
+-----------------------------------------####################------------------------------------------
+
+Footer syles - End
+
+-----------------------------------------####################------------------------------------------
+-----------------------------------------####################------------------------------------------
+-----------------------------------------####################------------------------------------------
+*/
+
+
+
+
+
+
+
+
+
+/* 
+-----------------------------------------####################------------------------------------------
+-----------------------------------------####################------------------------------------------
+-----------------------------------------####################------------------------------------------
+
+About syles - Start
+
+-----------------------------------------####################------------------------------------------
+-----------------------------------------####################------------------------------------------
+-----------------------------------------####################------------------------------------------
+*/
+
+/* background image container */
+.abt-back{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("../image/about/abtimg.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: darken;
+}
+
+
+.general-head-section{
+    padding-top: 10.5em;
+    padding-bottom: 3.15em;
+}
+.gen-heading {
+    font-size: 1.5em;
+    font-weight: var(--font-weight-large);
+    color: var(--blue);
+    line-height: 1.35;
+    padding-bottom: 0.2em;
+}
+.abt-sec{
+    padding-bottom: 1.15em;
+    padding-top: 1.15em;
+}
+
+
+.header-right-container{
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='300' height='560' preserveAspectRatio='none' viewBox='0 0 300 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1001%26quot%3b)' fill='none'%3e%3cpath d='M1.93 57.49L23.58 69.99L23.58 94.99L1.93 107.49L-19.72 94.99L-19.72 69.99zM1.93 207.49L23.58 219.99L23.58 244.99L1.93 257.49L-19.72 244.99L-19.72 219.99zM23.58 244.99L45.23 257.49L45.23 282.49L23.58 294.99L1.93 282.49L1.93 257.49zM1.93 357.49L23.58 369.99L23.58 394.99L1.93 407.49L-19.72 394.99L-19.72 369.99zM23.58 469.99L45.23 482.49L45.23 507.49L23.58 519.99L1.93 507.49L1.93 482.49zM1.93 507.49L23.58 519.99L23.58 544.99L1.93 557.49L-19.72 544.99L-19.72 519.99zM23.58 544.99L45.23 557.49L45.23 582.49L23.58 594.99L1.93 582.49L1.93 557.49zM45.23 -17.51L66.88 -5.01L66.88 19.99L45.23 32.49L23.58 19.99L23.58 -5.01zM45.23 57.49L66.88 69.99L66.88 94.99L45.23 107.49L23.58 94.99L23.58 69.99zM45.23 132.49L66.88 144.99L66.88 169.99L45.23 182.49L23.58 169.99L23.58 144.99zM66.88 244.99L88.54 257.49L88.54 282.49L66.88 294.99L45.23 282.49L45.23 257.49zM66.88 319.99L88.54 332.49L88.54 357.49L66.88 369.99L45.23 357.49L45.23 332.49zM66.88 394.99L88.54 407.49L88.54 432.49L66.88 444.99L45.23 432.49L45.23 407.49zM88.54 57.49L110.19 69.99L110.19 94.99L88.54 107.49L66.88 94.99L66.88 69.99zM110.19 169.99L131.84 182.49L131.84 207.49L110.19 219.99L88.54 207.49L88.54 182.49zM110.19 244.99L131.84 257.49L131.84 282.49L110.19 294.99L88.54 282.49L88.54 257.49zM110.19 394.99L131.84 407.49L131.84 432.49L110.19 444.99L88.54 432.49L88.54 407.49zM88.54 432.49L110.19 444.99L110.19 469.99L88.54 482.49L66.88 469.99L66.88 444.99zM110.19 469.99L131.84 482.49L131.84 507.49L110.19 519.99L88.54 507.49L88.54 482.49zM131.84 -17.51L153.49 -5.01L153.49 19.99L131.84 32.49L110.19 19.99L110.19 -5.01zM153.49 19.99L175.14 32.49L175.14 57.49L153.49 69.99L131.84 57.49L131.84 32.49zM131.84 132.49L153.49 144.99L153.49 169.99L131.84 182.49L110.19 169.99L110.19 144.99zM153.49 169.99L175.14 182.49L175.14 207.49L153.49 219.99L131.84 207.49L131.84 182.49zM131.84 357.49L153.49 369.99L153.49 394.99L131.84 407.49L110.19 394.99L110.19 369.99zM153.49 394.99L175.14 407.49L175.14 432.49L153.49 444.99L131.84 432.49L131.84 407.49zM131.84 507.49L153.49 519.99L153.49 544.99L131.84 557.49L110.19 544.99L110.19 519.99zM175.14 57.49L196.79 69.99L196.79 94.99L175.14 107.49L153.49 94.99L153.49 69.99zM196.79 94.99L218.44 107.49L218.44 132.49L196.79 144.99L175.14 132.49L175.14 107.49zM175.14 132.49L196.79 144.99L196.79 169.99L175.14 182.49L153.49 169.99L153.49 144.99zM196.79 169.99L218.44 182.49L218.44 207.49L196.79 219.99L175.14 207.49L175.14 182.49zM175.14 207.49L196.79 219.99L196.79 244.99L175.14 257.49L153.49 244.99L153.49 219.99zM196.79 544.99L218.44 557.49L218.44 582.49L196.79 594.99L175.14 582.49L175.14 557.49zM240.09 169.99L261.75 182.49L261.75 207.49L240.09 219.99L218.44 207.49L218.44 182.49zM218.44 282.49L240.09 294.99L240.09 319.99L218.44 332.49L196.79 319.99L196.79 294.99zM240.09 544.99L261.75 557.49L261.75 582.49L240.09 594.99L218.44 582.49L218.44 557.49zM283.4 19.99L305.05 32.49L305.05 57.49L283.4 69.99L261.75 57.49L261.75 32.49zM261.75 57.49L283.4 69.99L283.4 94.99L261.75 107.49L240.09 94.99L240.09 69.99zM261.75 207.49L283.4 219.99L283.4 244.99L261.75 257.49L240.09 244.99L240.09 219.99zM261.75 282.49L283.4 294.99L283.4 319.99L261.75 332.49L240.09 319.99L240.09 294.99zM283.4 319.99L305.05 332.49L305.05 357.49L283.4 369.99L261.75 357.49L261.75 332.49zM261.75 432.49L283.4 444.99L283.4 469.99L261.75 482.49L240.09 469.99L240.09 444.99zM283.4 544.99L305.05 557.49L305.05 582.49L283.4 594.99L261.75 582.49L261.75 557.49z' stroke='rgba(37%2c 36%2c 34%2c 1)' stroke-width='2'%3e%3c/path%3e%3cpath d='M-1.07 57.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM20.58 69.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM20.58 94.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM-1.07 107.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM-22.72 94.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM-22.72 69.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM-1.07 207.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM20.58 219.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM20.58 244.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM-1.07 257.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM-22.72 244.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM-22.72 219.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM42.23 257.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM42.23 282.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM20.58 294.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM-1.07 282.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM-1.07 357.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM20.58 369.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM20.58 394.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM-1.07 407.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM-22.72 394.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM-22.72 369.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM20.58 469.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM42.23 482.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM42.23 507.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM20.58 519.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM-1.07 507.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM-1.07 482.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM20.58 544.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM-1.07 557.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM-22.72 544.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM-22.72 519.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM42.23 557.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM42.23 582.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM20.58 594.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM-1.07 582.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM42.23 -17.51 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM63.88 -5.01 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM63.88 19.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM42.23 32.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM20.58 19.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM20.58 -5.01 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM42.23 57.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM63.88 69.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM63.88 94.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM42.23 107.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM42.23 132.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM63.88 144.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM63.88 169.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM42.23 182.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM20.58 169.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM20.58 144.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM63.88 244.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM85.54 257.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM85.54 282.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM63.88 294.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM63.88 319.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM85.54 332.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM85.54 357.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM63.88 369.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM42.23 357.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM42.23 332.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM63.88 394.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM85.54 407.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM85.54 432.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM63.88 444.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM42.23 432.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM42.23 407.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM85.54 57.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM107.19 69.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM107.19 94.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM85.54 107.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM107.19 169.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM128.84 182.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM128.84 207.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM107.19 219.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM85.54 207.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM85.54 182.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM107.19 244.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM128.84 257.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM128.84 282.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM107.19 294.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM107.19 394.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM128.84 407.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM128.84 432.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM107.19 444.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM107.19 469.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM85.54 482.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM63.88 469.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM128.84 482.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM128.84 507.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM107.19 519.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM85.54 507.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM128.84 -17.51 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM150.49 -5.01 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM150.49 19.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM128.84 32.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM107.19 19.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM107.19 -5.01 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM172.14 32.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM172.14 57.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM150.49 69.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM128.84 57.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM128.84 132.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM150.49 144.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM150.49 169.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM107.19 144.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM172.14 182.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM172.14 207.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM150.49 219.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM128.84 357.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM150.49 369.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM150.49 394.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM107.19 369.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM172.14 407.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM172.14 432.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM150.49 444.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM150.49 519.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM150.49 544.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM128.84 557.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM107.19 544.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM193.79 69.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM193.79 94.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM172.14 107.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM150.49 94.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM215.44 107.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM215.44 132.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM193.79 144.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM172.14 132.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM193.79 169.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM215.44 182.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM215.44 207.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM193.79 219.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM193.79 244.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM172.14 257.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM150.49 244.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM193.79 544.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM215.44 557.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM215.44 582.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM193.79 594.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM172.14 582.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM172.14 557.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM237.09 169.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM258.75 182.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM258.75 207.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM237.09 219.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM215.44 282.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM237.09 294.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM237.09 319.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM215.44 332.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM193.79 319.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM193.79 294.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM237.09 544.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM258.75 557.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM258.75 582.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM237.09 594.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM280.4 19.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM302.05 32.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM302.05 57.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM280.4 69.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM258.75 57.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM258.75 32.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM280.4 94.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM258.75 107.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM237.09 94.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM237.09 69.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM280.4 219.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM280.4 244.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM258.75 257.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM237.09 244.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM258.75 282.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM280.4 294.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM280.4 319.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM258.75 332.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM302.05 332.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM302.05 357.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM280.4 369.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM258.75 357.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM258.75 432.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM280.4 444.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM280.4 469.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM258.75 482.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM237.09 469.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM237.09 444.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM280.4 544.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM302.05 557.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM302.05 582.49 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0zM280.4 594.99 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0z' fill='rgba(37%2c 36%2c 34%2c 1)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1001'%3e%3crect width='300' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+    /* Background pattern of image */
+    padding: 25px;
+}
+
+@media screen and (max-width: 991px) {
+    .about-inverse{
+        flex-direction: column-reverse;
+    }
+    .header-right-container{
+        margin-bottom: 1.15em;
+    }
+}
+
+.last-abt-con{
+    text-align: center;
+}
+.abt-btn-wrap{
+    text-align: center;
+}
+.abt-btn {
+    background: rgba(245, 245, 245, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1.5px solid var(--font-color-white);
+    box-shadow: 0 3px 6px 0 rgb(31 38 135 / 7%), 0 5px 15px 0 rgb(31 38 135 / 9%);
+    color: var(--font-color-white);
+    cursor: pointer;
+    display: inline-block;
+    font-weight: var(--font-weight-medium);
+    font-size: var(--general-smallest-text);
+    padding: 15.55px 22.5px 15.55px 22.5px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.3s;
+    white-space: nowrap;
+}
+.abt-btn:hover {
+    color: var(--font-color-white);
+    padding: 17.55px 23.5px 17.55px 23.5px;
+    text-decoration: none;
+}
+
+/* 
+-----------------------------------------####################------------------------------------------
+-----------------------------------------####################------------------------------------------
+-----------------------------------------####################------------------------------------------
+
+About syles - End
+
+-----------------------------------------####################------------------------------------------
+-----------------------------------------####################------------------------------------------
+-----------------------------------------####################------------------------------------------
+*/
+
+
+
+
+
+
+
+
+
+/* 
+-----------------------------------------####################------------------------------------------
+-----------------------------------------####################------------------------------------------
+-----------------------------------------####################------------------------------------------
+
+Rules syles - Start
+
+-----------------------------------------####################------------------------------------------
+-----------------------------------------####################------------------------------------------
+-----------------------------------------####################------------------------------------------
+*/
+
+.rule-back{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url("../image/home/rules/head-img.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: darken;
+}
+
+.policy-card-con{
+    backdrop-filter: blur(10px);
+    background-color: var(--web-light-background);
+    box-shadow: 0 1.5px 3px 0 rgba(0, 0, 0, 0.2), 0 1.5px 3px 0 rgba(0, 0, 0, 0.2),;
+    border-left: none;
+    height: 100%;
+    padding: 20px;
+}
+
+.policy-1{
+    border-top: #c71a1a 3px solid;
+}
+.policy-2{
+    border-top: #ed6c09 3px solid;
+}
+.policy-3{
+    border-top: #d5b503 3px solid;
+}
+.policy-4{
+    border-top: #64c514 3px solid;
+}
+.policy-5{
+    border-top: #06940b 3px solid;
+}
+.policy-6{
+    border-top: #0dba5b 3px solid;
+}
+.policy-7{
+    border-top: #007892 3px solid;
+}
+.policy-8{
+    border-top: #0949aa 3px solid;
+}
+.policy-9{
+    border-top: #430ac5 3px solid;
+}
+.policy-10{
+    border-top: #c20e9e 3px solid;
+}
+.policy-11{
+    border-top: #c50766 3px solid;
+}
+.policy-12{
+    border-top: #e10e46 3px solid;
+}
+.policy-13{
+    border-top: #8e0eae 3px solid;
+}
+.policy-14{
+    border-top: #069b8c 3px solid;
+}
+.policy-15{
+    border-top: #bd4c00 3px solid;
+}
+.policy-16{
+    border-top: #c50766 3px solid;
+}
+
+/* Rules laptop screen resolution */
+@media only screen and (max-width: 1200px) {
+    
+    .falcon{
+        margin-top: 30px;
+    }
+
+}
+
+
+/* Rules laptop screen resolution */
+@media only screen and (min-width: 1024px) {
+    
+    .policy-card-con{
+        border-top: none;
+    }
+
+
+
+        
+    .policy-1{
+        border-left: #c71a1a 3px solid;
+    }
+    .policy-2{
+        border-left: #ed6c09 3px solid;
+    }
+    .policy-3{
+        border-left: #d5b503 3px solid;
+    }
+    .policy-4{
+        border-left: #64c514 3px solid;
+    }
+    .policy-5{
+        border-left: #06940b 3px solid;
+    }
+    .policy-6{
+        border-left: #0dba5b 3px solid;
+    }
+    .policy-7{
+        border-left: #007892 3px solid;
+    }
+    .policy-8{
+        border-left: #0949aa 3px solid;
+    }
+    .policy-9{
+        border-left: #430ac5 3px solid;
+    }
+    .policy-10{
+        border-left: #c20e9e 3px solid;
+    }
+    .policy-11{
+        border-left: #c50766 3px solid;
+    }
+    .policy-12{
+        border-left: #e10e46 3px solid;
+    }
+    .policy-13{
+        border-left: #8e0eae 3px solid;
+    }
+    .policy-14{
+        border-left: #069b8c 3px solid;
+    }
+    .policy-15{
+        border-left: #bd4c00 3px solid;
+    }
+    .policy-16{
+        border-left: #c50766 3px solid;
+    }
+}
+
+
+/* ---------------------------------------########### Rules container end ###########--------------------------------------- */
+
+
+/* 
+-----------------------------------------####################------------------------------------------
+-----------------------------------------####################------------------------------------------
+-----------------------------------------####################------------------------------------------
+
+Rules syles - End
+
+-----------------------------------------####################------------------------------------------
+-----------------------------------------####################------------------------------------------
+-----------------------------------------####################------------------------------------------
+*/
+
+
+
+
+
+
+
+
+
+/* 
+-----------------------------------------####################------------------------------------------
+-----------------------------------------####################------------------------------------------
+-----------------------------------------####################------------------------------------------
+
+FAQ syles - Start
+
+-----------------------------------------####################------------------------------------------
+-----------------------------------------####################------------------------------------------
+-----------------------------------------####################------------------------------------------
+*/
+
+/* background image container */
+.faq-back{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../image/faq/background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: darken;
+}
+
+.wrapper{
+    width: 100%;
+}
+
+.wrapper .accordion_wrap .accordion_header{
+    height: auto;
+    backdrop-filter: blur(10px);
+    background-color: var(--web-light-background);
+    padding: 15px 40px 15px 15px;
+    color: var(--font-color-dark);
+    border-bottom: 2px solid var(--web-dark-background);
+    position: relative;
+    cursor: pointer;
+}
+.accordion_header{
+    color: var(--font-color-dark);
+    font-size: var(--general-small-text);
+    font-weight: 800;
+}
+  
+.wrapper .accordion_wrap:last-child .accordion_header{
+    border-bottom: 2px solid transparent;
+}
+.wrapper .accordion_wrap:last-child .accordion_header:hover{
+    border-bottom: 2px solid transparent;
+}
+.wrapper .accordion_wrap .accordion_header:before,
+.wrapper .accordion_wrap .accordion_header:after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
+    width: 20px;
+    height: 2px;
+    background: var(--web-dark-background);
+}
+  
+.wrapper .accordion_wrap .accordion_header:hover{
+    color: #000;
+    border-color: var(--web-dark-background);
+}  
+.wrapper .accordion_wrap .accordion_header:hover:before,
+.wrapper .accordion_wrap .accordion_header:hover:after{
+    background: var(--web-dark-background);
+}  
+.wrapper .accordion_wrap .accordion_header:after{
+    transform: rotate(-90deg);
+    transition: all 0.5s ease;
+}
+  
+.wrapper .accordion_wrap .accordion_body{
+    height: 0px;
+    transition: all 0.5s ease;
+    backdrop-filter: blur(10px);
+    background-color: var(--web-light-background);
+    overflow: hidden;
+    border-bottom: var(--web-dark-background);
+}  
+.wrapper .accordion_wrap .accordion_body p{
+    padding: 15px;
+    font-size: var(--general-small-text);
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    line-height: 25.5px;
+    color: #000;
+}  
+.wrapper .accordion_wrap .accordion_header.active{
+    color: #000;
+    border-color: var(--web-dark-background);
+}  
+.wrapper .accordion_wrap:last-child .accordion_header.active{
+    border-bottom: 2px solid var(--web-dark-background);
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}  
+.wrapper .accordion_wrap .accordion_header.active:before,
+.wrapper .accordion_wrap .accordion_header.active:after{
+    background: var(--web-dark-background);
+}
+  
+.wrapper .accordion_wrap .accordion_header.active:after{
+    transform: rotate(0deg);
+}
+  
+.wrapper .accordion_wrap .accordion_header.active + .accordion_body{
+    height: auto;
+}
+
+
+/* Laptop screen resolution */
+@media only screen and (min-width: 960px) {
+    .wrapper{
+        width: 50%;
+    }
+}
+
+/* 
+-----------------------------------------####################------------------------------------------
+-----------------------------------------####################------------------------------------------
+-----------------------------------------####################------------------------------------------
+
+FAQ syles - End
+
+-----------------------------------------####################------------------------------------------
+-----------------------------------------####################------------------------------------------
+-----------------------------------------####################------------------------------------------
+./
+
+
+
+
+
+
+
+
+
+/* 
+-----------------------------------------####################------------------------------------------
+-----------------------------------------####################------------------------------------------
+-----------------------------------------####################------------------------------------------
+
+Signing syles - Start
+
+-----------------------------------------####################------------------------------------------
+-----------------------------------------####################------------------------------------------
+-----------------------------------------####################------------------------------------------
+*/
+
+/* background image container */
+.signin-back{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.875), rgba(0, 0, 0, 0.925)), url("../image/sign/download.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: darken;
+}
+.signout-back{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.875), rgba(0, 0, 0, 0.925)), url("../image/sign/download.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: darken;
+}
+
+.welcome-container{
+    box-shadow: 0 3px 6px 0 rgb(31 38 135 / 7%), 0 5px 15px 0 rgb(31 38 135 / 9%);
+    height: 100%;
+    padding: 3.25em 1.75em 3.25em 2em;
+    position: relative;
+}
+.shadow-con{
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.905), 0 25px 60px rgba(0, 0, 0, 0.905);
+}
+.sign-btn {
+    background: var(--blue);
+    border-radius: 1px;
+    box-shadow: 0 3px 6px 0 rgb(31 38 135 / 7%), 0 5px 15px 0 rgb(31 38 135 / 9%);
+    color: var(--font-color-white);
+    display: inline-block;
+    font-weight: var(--font-weight-small);
+    font-size: var(--general-smallest-text);
+    margin-top: 10px;
+    padding: 8px 22.5px 7px 22.5px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.3s;
+    white-space: nowrap;
+}
+.sign-btn:hover {
+    color: var(--font-color-light);
+    padding: 8.5px 19px 7.5px 19px;
+    text-decoration: none;
+}
+
+/* Icon container with signing form container */
+.sign-up-pad{
+    padding: 0.0003px;
+}
+.icon-container{
+    display: flex;
+    flex-direction: row;
+}
+.sign-container{
+    background: #4d4a4a;
+    box-shadow: 0 3px 6px 0 rgb(31 38 135 / 7%), 0 5px 15px 0 rgb(31 38 135 / 9%);
+    padding: 3.25em 2em 3.25em 2em;
+}
+.sign-pad{
+    padding: 0px;
+}
+
+
+.icon-wrap{
+    cursor: pointer;
+    background: var(--web-dark-background);
+    box-shadow: 0 1.5px 3px 0 rgb(31 38 135 / 7%), 0 2.5px 5px 0 rgb(31 38 135 / 9%);
+    height: 35px;
+    padding: 4.5px;
+    transition: ease-in-out 0.2s;
+    width: 35px;
+}
+.icon-wrap:hover{
+    transform: scale(1.075);
+}
+.icon-wrap:nth-child(2){
+    margin: 0 0.75em;
+}
+
+.sign-txt{
+    padding-top: 1.5em;
+}
+.input-icon-wrap{
+    background: transparent;
+    height: 21.5px;
+    margin: 8.75px 0 0 10px;
+    padding: 1.5px;
+    position: absolute;
+    width: 21.5px;
+}
+.input-wrap-shift{
+    margin-top: 22.15px;
+}
+.material-icons-outlined{
+    cursor: pointer;
+    margin-top: 28px;
+    padding: 0 3.5px;
+}
+
+/* Main form container */
+.form-input {
+    background: var(--web-light-background);
+    border: 2px solid rgba(0, 0, 0, 0.152);
+    box-shadow: inset 1px 2px 8px rgb(0 0 0 / 7%);
+    color: var(--font-color-dark);
+    height: 45px;
+    margin-top: 15px;
+    outline: none;
+    width: 100%;
+}
+
+.form-control {
+    display: block;
+    padding: 0.375rem 0.75rem 0.375rem 36.5px;
+    font-size: var(--general-small-text);
+    font-weight: var(--font-weight-medium);
+    letter-spacing: 0.025em;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    appearance: none;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+
+.forgot-wrap{
+    float: right;
+    margin-top: 12.5px;
+}
+.forgot-link{
+    color: var(--web-dark-background);
+    text-decoration: none;
+}
+.forgot-link:hover{
+    color: var(--web-dark-background);
+}
+
+
+.btn-wrap1{
+    background: var(--blue);
+    border-radius: 0px;
+    box-shadow: 0 1.5px 3px 0 rgb(31 38 135 / 7%), 0 2.5px 5px 0 rgb(31 38 135 / 9%);
+    color: var(--font-color-white);
+    font-size: var(--general-small-text);
+    font-weight: var(--font-weight-small);
+    padding: 0.55em 0;
+    letter-spacing: 0.25em;
+    margin-top: 15px;
+    position: relative;
+    width: 100%;
+}
+
+.btn-wrap1:hover{
+    color: var(--font-color-white);
+}
+
+/* 
+-----------------------------------------####################------------------------------------------
+-----------------------------------------####################------------------------------------------
+-----------------------------------------####################------------------------------------------
+
+Signing syles - End
+
+-----------------------------------------####################------------------------------------------
+-----------------------------------------####################------------------------------------------
+-----------------------------------------####################------------------------------------------
+*/

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Bootstrap css cdn link -->
+        <link rel="stylesheet" href="../bootstrap/css/bootstrap.css" crossorigin="anonymous">
+        
+        <!-- Main css stylesheet link -->
+        <link rel="stylesheet" href="../public/css/page.css">
+    </head>
+    <body>
+        <!-- Main container -->
+		<div class="container">
+            <div class="row">
+
+                <!-- Header text -->
+                <div class="col-12">
+                    <h3 class="fund-head-txt">Transactions on your account</h3>
+                </div>
+
+
+                <div class="col-12">
+                    <!-- Menu container -->
+                    <div class="container-wrapper">
+                        <div class="container">
+                            <div class="row">
+                                <!-- Container header containing navigation menu-->
+                                <div class="col-12">
+                                    <div class="container-head" id="container-head">
+                                        <span class="navigation-btn" id="personal-set-btn" onclick="show('personal-set');change('personal-set-btn');">Deposits</span>
+                                        <span class="navigation-btn" id="withdrawal-set-btn" onclick="show('withdrawal-set');change('withdrawal-set-btn');">Withdrawals</span>
+                                    </div>
+                                </div>
+
+                                
+
+                                <!-- ----------------- Container body code starts here ----------------- -->
+                                <div class="col-12">
+                                    <!-- Personal settings container start ----------------- -->
+                                    <div class="container-body" id="personal-set" style="padding-bottom: 80px;">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-sm-12 col-md-12 col-lg-12">
+                                                    <div class="history-wrapper">
+                                                        <div class="history-left-container">
+                                                            <span class="history-number" style="margin-bottom: 10px;color: rgb(220, 30, 30);font-size: 25px;font-weight: 900;">!</span>
+                                                            <span class="history-txt-left-wrap profit-txt-pad" style="padding-top: 17px;">
+                                                                There is no transaction on your record.
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Personal settings container end ----------------- -->
+
+
+
+                                    
+                                    <!-- Withdrawal settings container end ----------------- -->
+                                    <div class="container-body" id="withdrawal-set" style="display: none;padding-bottom: 80px;">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-sm-12 col-md-12 col-lg-12">
+                                                    <div class="history-wrapper">
+                                                        <div class="history-left-container">
+                                                            <span class="history-number" style="margin-bottom: 10px;color: rgb(220, 30, 30);font-size: 25px;font-weight: 900;">!</span>
+                                                            <span class="history-txt-left-wrap profit-txt-pad" style="padding-top: 17px;">
+                                                                There is no transaction on your record.
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Withdrawal settings container end ----------------- -->
+
+                                    
+                                </div>                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <!-- Footer section -->
+        <%- include('foot') %>
+
+
+    </body>
+    <!-- Bootstrap javascript cdn link -->
+    <script src="../bootstrap/js/bootstrap.js"></script>
+    <script src="../public/javascript/jquery.js"></script>
+    <script src="../public/javascript/accset.js"></script>
+</html>

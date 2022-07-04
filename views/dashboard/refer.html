@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Bootstrap css cdn link -->
+        <link rel="stylesheet" href="../bootstrap/css/bootstrap.css" crossorigin="anonymous">
+        
+        <!-- Font Awesome cdn link -->
+        <script src="https://kit.fontawesome.com/1d25c703c8.js" crossorigin="anonymous"></script>
+        
+        <!-- Main css stylesheet link -->
+        <link rel="stylesheet" href="../public/css/page.css">
+    </head>
+    <body>
+        <!-- Main container -->
+		<div class="container">
+            <div class="row">
+
+                <!-- Header text -->
+                <div class="col-12">
+                    <h3 class="fund-head-txt">Refer users to FalconFX Trade community</h3>
+                </div>
+
+
+                <div class="col-sm-11 col-md-8 col-lg-6 mx-auto">
+                    <!-- Menu container -->
+                    <div class="container-wrapper" id="profit-wrap">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="with-head-con" style="border-left: 3px solid rgb(206, 37, 37);overflow: hidden;">
+                                                    <span class="with-type">This feature is no more in use </span>
+                                                </div>
+                                            </div>
+
+                                            <!-- Wallet Address -->
+                                            <div class="col-12">
+                                                <p class="fund-lg-txt" style="text-align: center;">You can refer users by sharing your referral link:</p>
+                                                <div class="copy-wrap">
+                                                    <span class="copySub">
+                                                        <label id="api_token" class="copySubTxt"></label>
+                                                    </span>
+                                                    <button id="copy_token" class="api-copy-btn">
+                                                        <span class="api-copy-btn__tooltip" id="copy_token_tooltip">Copy to clipboard</span>
+                                                        <i class="fa fa-solid fa-copy"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+
+                                            <div class="refer-txt">
+                                                <h5>Or your Referral ID</h5>
+                                                <p style="color: green;">XXxxxxxXxxxxxXX</p>
+                                            </div>
+
+                                            <div class="refer-info">
+                                                <h6>You were referred by</h6>
+                                                <i class="fa user-icon fa-solid fa-user" style="font-size: 45px;"></i>
+                                                <p style="font-weight: 700;padding-top: 5px;">No one</p>
+                                            </div>
+
+                                            <div class="refer-txt">
+                                                <h4>Your Referrals</h4>
+                                            </div>
+                                            <p style="padding-left: 15px;">No record.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <!-- Footer section -->
+        <%- include('foot') %>
+
+
+    </body>
+    <!-- Bootstrap javascript cdn link -->
+    <script src="../bootstrap/js/bootstrap.js"></script>
+    <script src="../public/javascript/jquery.js"></script>
+    <script src="../public/javascript/accset.js"></script>
+
+</html>

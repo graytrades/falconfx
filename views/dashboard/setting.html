@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Bootstrap css cdn link -->
+        <link rel="stylesheet" href="../bootstrap/css/bootstrap.css" crossorigin="anonymous">
+        
+        <!-- Main css stylesheet link -->
+        <link rel="stylesheet" href="../public/css/page.css">
+    </head>
+    <body>
+        <!-- Main container -->
+		<div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <!-- Menu container -->
+                    <div class="container-wrapper">
+                        <div class="container">
+                            <div class="row">
+
+                                <div class="col-12">
+                                    <div class="with-head-con" style="border-left: 3px solid rgb(206, 37, 37);overflow: hidden;">
+                                        <span class="with-type">Sorry but your account needs more activity to access these features </span>
+                                        <a class="otp-request-btn" href="https://t.me/markhutchinson_official" target="_blank"><i class="fa fa-brands fa-telegram"></i><span style="padding-left: 12.5px;">Contact Us Telegram </span></a>                                        
+                                    </div>
+                                </div>
+
+                                <!-- Container header containing navigation menu-->
+                                <div class="col-12">
+                                    <div class="container-head">
+                                        <span class="navigation-btn" id="personal-set-btn"  onclick="show('personal-set');change('personal-set-btn');">Personal Settings</span>
+                                        <span class="navigation-btn" id="withdrawal-set-btn"  onclick="show('withdrawal-set');change('withdrawal-set-btn');">Withdrawal Settings</span>
+                                        <span class="navigation-btn" id="password-set-btn"  onclick="show('password-set');change('password-set-btn');">Password/Security</span>
+                                    </div>
+                                </div>
+
+                                
+
+                                <!-- ----------------- Container body code starts here ----------------- -->
+                                <div class="col-12">
+                                    <!-- Personal settings container start ----------------- -->
+                                    <div class="container-body" id="personal-set">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-sm-12 col-md-12 col-lg-12">
+                                                    <form class="sub-container-wrapper">
+                                                        <div class="container-fluid">
+                                                            <div class="row">
+                                                                <div class="col-sm-12 col-md-6 col-lg-6 p-2">
+                                                                    <div class="con-form">
+                                                                        <label class="con-form-label">Full Name</label>
+                                                                        <input class="con-form-input" type="name" placeholder="Enter Text Here.." required>
+                                                                    </div>
+                                                                </div>
+                                                                
+                                                                <div class="col-sm-12 col-md-6 col-lg-6 p-2">
+                                                                    <div class="con-form">
+                                                                        <label class="con-form-label">Phone Number</label>
+                                                                        <input class="con-form-input" type="number" placeholder="Enter Phone Number.." required>
+                                                                    </div>
+                                                                </div>
+                                                                
+                                                                <div class="col-sm-12 col-md-6 col-lg-6 p-2">
+                                                                    <div class="con-form">
+                                                                        <label class="con-form-label">Date of Birth</label>
+                                                                        <input class="con-form-input" type="date" placeholder="Enter Date Here.." required>
+                                                                    </div>
+                                                                </div>
+                                                                
+                                                                <div class="col-sm-12 col-md-6 col-lg-6 p-2">
+                                                                    <div class="con-form">
+                                                                        <label class="con-form-label">Nationality & Address</label>
+                                                                        <textarea class="con-form-input" type="address" placeholder="Enter Text Here.." required></textarea>
+                                                                    </div>
+                                                                </div>
+                                                                
+                                                                
+                                                                <div class="col-12">
+                                                                    <div class="con-form-btn-wrapper">
+                                                                        <button class="con-form-btn">Update Profile</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Personal settings container end ----------------- -->
+
+
+
+
+                                    
+                                    <!-- Withdrawal settings container end ----------------- -->
+                                    <div class="container-body" id="withdrawal-set" style="display: none;">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-sm-12 col-md-12 col-lg-12">
+                                                    <form class="sub-container-wrapper" style="padding-top: 20px;">
+                                                        <div class="container-fluid">
+                                                            <div class="row">
+                                                                <div class="col-12">
+                                                                    <div class="con-sub-head-wrapper">
+                                                                        <p class="con-sub-head-txt">Bank Account</p>
+                                                                    </div>
+                                                                </div>
+                                                                
+                                                                <div class="col-sm-12 col-md-6 col-lg-6 p-2">
+                                                                    <div class="con-form">
+                                                                        <label class="con-form-label">Bank Name</label>
+                                                                        <input class="con-form-input" type="text" placeholder="Enter Bank Name..">
+                                                                    </div>
+                                                                </div>
+                                                                
+                                                                <div class="col-sm-12 col-md-6 col-lg-6 p-2">
+                                                                    <div class="con-form">
+                                                                        <label class="con-form-label">Account Name</label>
+                                                                        <input class="con-form-input" type="number" placeholder="Enter Account Name..">
+                                                                    </div>
+                                                                </div>
+                                                                
+                                                                <div class="col-sm-12 col-md-6 col-lg-6 p-2">
+                                                                    <div class="con-form">
+                                                                        <label class="con-form-label">Swift Code</label>
+                                                                        <input class="con-form-input" type="number" placeholder="Enter swift code..">
+                                                                    </div>
+                                                                </div>
+                                                                
+                                                                <div class="seperator"></div>
+                                                                
+                                                                <div class="col-12">
+                                                                    <div class="con-sub-head-wrapper">
+                                                                        <p class="con-sub-head-txt">Cryptocurrency</p>
+                                                                    </div>
+                                                                </div>
+                                                                
+                                                                
+                                                                <div class="col-sm-12 col-md-6 col-lg-6 p-2">
+                                                                    <div class="con-form">
+                                                                        <label class="con-form-label">Bitcoin</label>
+                                                                        <input class="con-form-input" placeholder="Enter Bitcoin Address..">
+                                                                        <label class="con-form-txt">
+                                                                            Enter your Bitcoin Address that will be used to withdraw your funds
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                                
+                                                                <div class="col-sm-12 col-md-6 col-lg-6 p-2">
+                                                                    <div class="con-form">
+                                                                        <label class="con-form-label">Ethereum</label>
+                                                                        <input class="con-form-input" placeholder="Enter Ethereum Address..">
+                                                                        <label class="con-form-txt">
+                                                                            Enter your Ethereum Address that will be used to withdraw your funds
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                                
+                                                                <div class="col-sm-12 col-md-6 col-lg-6 p-2">
+                                                                    <div class="con-form">
+                                                                        <label class="con-form-label">Litecoin</label>
+                                                                        <input class="con-form-input" placeholder="Enter Litecoin Address..">
+                                                                        <label class="con-form-txt">
+                                                                            Enter your Litecoin Address that will be used to withdraw your funds
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                                
+                                                                
+                                                                <div class="col-12">
+                                                                    <div class="con-form-btn-wrapper">
+                                                                        <button class="con-form-btn">Save</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Withdrawal settings container end ----------------- -->
+
+
+
+
+                                    
+                                    <!-- Password settings container end ----------------- -->
+                                    <div class="container-body" id="password-set" style="display: none;">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-sm-12 col-md-12 col-lg-12">
+                                                    <form class="sub-container-wrapper">
+                                                        <div class="container-fluid">
+                                                            <div class="row">
+                                                                <div class="col-sm-12 col-md-6 col-lg-6 p-2">
+                                                                    <div class="con-form">
+                                                                        <label class="con-form-label">Old Password</label>
+                                                                        <input class="con-form-input" placeholder="Old Password..">
+                                                                    </div>
+                                                                </div>
+                                                                
+                                                                <div class="col-sm-12 col-md-6 col-lg-6 p-2">
+                                                                    <div class="con-form">
+                                                                        <label class="con-form-label">New Password</label>
+                                                                        <input class="con-form-input" placeholder="New Password..">
+                                                                    </div>
+                                                                </div>
+                                                                
+                                                                <div class="col-sm-12 col-md-6 col-lg-6 p-2">
+                                                                    <div class="con-form">
+                                                                        <label class="con-form-label">Confirm New Password</label>
+                                                                        <input class="con-form-input" placeholder="ReInput New Password..">
+                                                                    </div>
+                                                                </div>
+                                                                
+                                                                <div class="col-12">
+                                                                    <div class="con-form-btn-wrapper">
+                                                                        <button class="con-form-btn">Update Password</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Password settings container end ----------------- -->
+
+                                    
+                                </div>                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <!-- Footer section -->
+        <%- include('foot') %>
+
+
+    </body>
+    <!-- Bootstrap javascript cdn link -->
+    <script src="../bootstrap/js/bootstrap.js"></script>
+    <script src="../public/javascript/jquery.js"></script>
+    <script src="../public/javascript/accset.js"></script>
+</html>

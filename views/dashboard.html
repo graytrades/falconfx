@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">     
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Montserrat:300" rel="stylesheet">   
+
+        <!-- Bootstrap css link -->
+        <link rel="stylesheet" href="../node/bootstrap/dist/css/bootstrap.css">
+        <!-- Main css link -->
+        <link rel="stylesheet" href="../public/css/structure.css">
+        
+        <!-- Main css stylesheet link -->
+        <link rel="stylesheet" href="css/style.css">
+        <title>GrayTrades</title>
+    </head>
+    <body>
+        <!-- Dashboard parent wrapper -->
+        <div id="wrapper">
+            
+            <!-- ------------- Side navigation menu starts here ------------- -->
+            <section id="sidebar-wrapper">
+                <!-- Prevent overflow from padding -->
+                <div class="side-bar-inner-wrapper">
+                    <!-- Name of user in side navigation menu -->
+                    <div class="user-name-wrapper">
+                        <i class="fa user-icon fa-solid fa-user"></i>
+                        <span class="user-text"> Welcome <%= user.name %></span>
+                    </div>
+
+                    <!-- Navigation first wrapper so as to acheive the space between the top and bottom button group -->
+                    <div class="nav-section">
+                  
+                        <!-- Top navigation btn group -->
+                        <div class="nav-top-menu">
+                            <!-- Dashboard btn -->
+                            <div class="side-nav-wrapper" id="dashboard" onclick="show('display-dashboard');change('dashboard');"><!-- Onclick function 
+                                show() makes the display screen visible, while function change() changes the style of the chosen navigation button -->
+                                <i class="fa menu-icon fa-solid fa-box"></i>
+                                <span class="menu-text">Dashboard</span>
+                            </div>
+
+                            <!-- Fund btn -->
+                            <div class="side-nav-wrapper" id="fund" onclick="show('display-fund');change('fund');"><!-- Onclick function 
+                                show() makes the display screen visible, while function change() changes the style of the chosen navigation button -->
+                                <i class="fa menu-icon fa-solid fa-download"></i>
+                                <span class="menu-text">Fund Your Account</span>
+                            </div>
+
+                            <!-- Widthdraw btn -->
+                            <div class="side-nav-wrapper" id="withdraw" onclick="show('display-withdraw');change('withdraw');"><!-- Onclick function 
+                                show() makes the display screen visible, while function change() changes the style of the chosen navigation button -->
+                                <i class="fa menu-icon fa-solid fa-upload"></i>
+                                <span class="menu-text">Widthdraw Funds</span>
+                            </div>
+
+                            <!-- Profit btn -->
+                            <div class="side-nav-wrapper" id="profit" onclick="show('display-profit');change('profit');"><!-- Onclick function 
+                                show() makes the display screen visible, while function change() changes the style of the chosen navigation button -->
+                                <i class="fa menu-icon fa-solid fa-chart-area"></i>
+                                <span class="menu-text">Profit Record</span>
+                            </div>
+
+                            <!-- Subscribe btn -->
+                            <div class="side-nav-wrapper" id="subscribe" onclick="show('display-subscribe');change('subscribe');"><!-- Onclick function 
+                                show() makes the display screen visible, while function change() changes the style of the chosen navigation button -->
+                                <i class="fa menu-icon fa-regular fa-cubes"></i>
+                                <span class="menu-text">Subscribe To Plan</span>
+                            </div>
+
+                            <!-- Transaction btn -->
+                            <div class="side-nav-wrapper" id="history" onclick="show('display-history');change('history');"><!-- Onclick function 
+                                show() makes the display screen visible, while function change() changes the style of the chosen navigation button -->
+                                <i class="fa menu-icon fa-regular fa-folder-plus"></i>
+                                <span class="menu-text">Transaction History</span>
+                            </div>
+                        </div>
+    
+                        
+                        <!-- Bottom navigation btn group -->
+                        <div class="nav--menu">
+                            <!-- Settings btn -->
+                            <div class="side-nav-wrapper" id="setting" onclick="show('display-setting');change('setting');"><!-- Onclick function 
+                                show() makes the display screen visible, while function change() changes the style of the chosen navigation button -->
+                                <i class="fa menu-icon fa-solid fa-toolbox"></i>
+                                <span class="menu-text">Account Settings</span>
+                            </div>
+
+                            <!-- Refer btn -->
+                            <div class="side-nav-wrapper" id="refer" onclick="show('display-refer');change('refer');"><!-- Onclick function 
+                                show() makes the display screen visible, while function change() changes the style of the chosen navigation button -->
+                                <i class="fa menu-icon fa-regular fa-recycle"></i>
+                                <span class="menu-text">Refer People</span>
+                            </div>
+
+                            <!-- Help btn -->
+                            <div class="side-nav-wrapper" id="help" onclick="show('display-help');change('help');"><!-- Onclick function 
+                                show() makes the display screen visible, while function change() changes the style of the chosen navigation button -->
+                                <i class="fa menu-icon fa-solid fa-headset"></i>
+                                <span class="menu-text">Help/Support</span>
+                            </div>
+
+                            <!-- Spacing found at the bottom of the side navigation menu -->
+                            <div class="side-space-bottom"></div>
+                        </div>
+    
+                    </div>
+                </div>
+            <!-- /#sidebar-wrapper -->
+            </section>
+            <!-- ------------- Side navigation menu starts here ------------- -->
+
+
+
+
+
+            <!-- ------------- Display pages starts here ------------- -->
+            <section id="page-content-wrapper">
+                <!-- Dashboard header container -->
+                <div class="dashboard-header">
+                    <div class="header-right">
+                        <span class="ham-span">
+                            <a href="#menu-toggle" class="toggle-btn" id="menu-toggle"><i class="fa head-icon fa-solid fa-bars" style="color: #fff;"></i></a>
+                        </span>
+                        <span class="web-name" style="color: #eaeaea;">FalconFX Trade</span>
+                    </div>
+                    <span class="head-btn" id="exit" onclick="show('display-exit');change('exit');">
+                        <i class="fa exit-icon fa-solid fa-door-open" style="color: #eaeaea;"></i>
+                    </span>
+                </div>
+
+                <!-- Display section -->
+                <div class="display-wrapper">
+
+                    <!-- Dashboard display page container -->
+                    <div class="display" id="display-dashboard">
+                        <iframe src="dashboard/home" id="frame" style="width: 100%;height: calc(100vh - 56px);" frameborder="0"></iframe>
+                    </div>
+
+                    <!-- Fund account display page container -->
+                    <div class="display" id="display-fund" style="display: none;">
+                        <iframe src="dashboard/fund" id="frame" style="width: 100%;height: calc(100vh - 56px);" frameborder="0"></iframe>
+                    </div>
+
+                    <!-- Withdrawal request display page container -->
+                    <div class="display" id="display-withdraw" style="display: none;">
+                        <iframe src="dashboard/withdraw" id="frame" style="width: 100%;height: calc(100vh - 56px);" frameborder="0"></iframe>
+                    </div>
+
+                    <!-- Profit History display page container -->
+                    <div class="display" id="display-profit" style="display: none;">
+                        <iframe src="dashboard/profit" id="frame" style="width: 100%;height: calc(100vh - 56px);" frameborder="0"></iframe>
+                    </div>
+                    
+                    <!-- Suscribe to plan display page container -->
+                    <div class="display" id="display-subscribe" style="display: none;">
+                        <iframe src="dashboard/plan" id="frame" style="width: 100%;height: calc(100vh - 56px);" frameborder="0"></iframe>
+                    </div>
+                    
+                    <!-- Transaction history display page container -->
+                    <div class="display" id="display-history" style="display: none;">
+                        <iframe src="dashboard/history" id="frame" style="width: 100%;height: calc(100vh - 56px);" frameborder="0"></iframe>
+                    </div>
+
+                    <!-- Settings display page container -->
+                    <div class="display" id="display-setting" style="display: none;">
+                        <iframe src="dashboard/setting" id="frame" style="width: 100%;height: calc(100vh - 56px);" frameborder="0"></iframe>
+                    </div>
+
+                    <!-- Refer users display page container -->
+                    <div class="display" id="display-refer" style="display: none;">
+                        <iframe src="dashboard/refer" id="frame" style="width: 100%;height: calc(100vh - 56px);" frameborder="0"></iframe>
+                    </div>
+
+                    <!-- Help/Support display page container -->
+                    <div class="display" id="display-help" style="display: none;">
+                        <iframe src="dashboard/support" id="frame" style="width: 100%;height: calc(100vh - 56px);" frameborder="0"></iframe>
+                    </div>
+
+                    <!-- Exit display page container -->
+                    <div class="display" id="display-exit" style="display: none;">
+                        <iframe src="dashboard/exit" id="frame" style="width: 100%;height: calc(100vh - 56px);" frameborder="0"></iframe>
+                    </div>
+                </div>
+
+            </section>
+
+
+        </div>
+    </body>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+    <script src="../public/javascript/script.js"></script>
+
+    <!-- Option 1: Bootstrap Bundle with JQuery -->
+    <script src="../public/javascript/jquery.js"></script>
+    <script src="../node/bootstrap/dist/js/bootstrap.js"></script>
+
+    <script>
+        // ------------------- Toggle Javascript Container Funtion start ---------------------
+        $("#menu-toggle").click(function(e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+        // ------------------- Toggle Javascript Container Funtion end ---------------------
+    </script>
+    
+</html>
